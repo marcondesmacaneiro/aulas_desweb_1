@@ -4,11 +4,11 @@ body{
 h1{
     text-align: center;
     color: white;
-    font-family: Arial;
-    font-size: 70px;
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 40pt;
 }
 .containerC{
     background-color: #1e6d3a;
-    height: 865px;
+    height: 825px;
     border: 1px black dashed;
 }
