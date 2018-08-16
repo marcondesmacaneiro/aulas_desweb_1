@@ -1,0 +1,10 @@
+version: '3.1'
+services:
+  php:
+    build: php
+    container_name: php-aulasweb1
+    restart: always
+    volumes:
+    - ./php:/var/php
+    ports:
+    - 41065:80
