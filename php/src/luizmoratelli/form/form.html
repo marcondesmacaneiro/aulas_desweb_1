@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulário</title>
+</head>
+<body>
+    <header>
+        <h1>Formulário</h1>
+    </header>
+    <main>
+        <form action="http://localhost:41065/marcondes/formcadastro.php" method="POST" target="_blank">
+            <fieldset>
+                <legend>Selecione as cores desejadas:</legend>
+                <input type="checkbox" name="cores[]" id="vermelho" value="red">
+                <label for="vermelho">Vermelho</label>
+                <input type="checkbox" name="cores[]" id="azul" value="blue">
+                <label for="azul">Azul</label>
+                <input type="checkbox" name="cores[]" id="verde" value="green">
+                <label for="verde">Verde</label>
+            </fieldset>
+            <fieldset>
+                <legend>Selecione as marcas de carro desejadas:</legend>
+                <input type="checkbox" name="marcas-carro[]" id="vw" value="vw">
+                <label for="vw">VolksWagen</label>
+                <input type="checkbox" name="marcas-carro[]" id="ford" value="ford">
+                <label for="ford">Ford</label>
+                <input type="checkbox" name="marcas-carro[]" id="chevrolet" value="chevrolet">
+                <label for="chevrolet">Chevrolet</label>
+            </fieldset>
+            <fieldset>
+                <legend>Sexo:</legend>
+                <input type="radio" name="sexo" id="masc" value="masc">
+                <label for="masc">Masculino</label>
+                <input type="radio" name="sexo" id="fem" value="fem">
+                <label for="fem">Feminino</label>
+            </fieldset>
+            <fieldset>
+                <legend>Selecione a cidade residente:</legend>
+                <select name="cidade" id="cidade">
+                    <option value="rio-do-oeste">Rio do Oeste</option>
+                    <option value="rio-do-sul">Rio do Sul</option>
+                    <option value="laurentino">Laurentino</option>
+                    <option value="agronomica">Agronômica</option>
+                    <option value="taio">Taió</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Foto de Perfil:</legend>
+                <input type="file" name="foto-perfil" id="foto-perfil">
+            </fieldset>
+            <button type="reset">Limpar</button>
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+</body>
+</html>
