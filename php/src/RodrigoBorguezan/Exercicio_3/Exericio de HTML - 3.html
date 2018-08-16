@@ -1,0 +1,59 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+    <title>Formulário</title> 
+</head> 
+<body> 
+    <header> 
+        <h1>Formulário</h1> 
+    </header> 
+    <main> 
+        <form action="http://localhost:41065/marcondes/formcadastro.php" method="POST" target="_blank"> 
+            <fieldset> 
+                <legend>Selecione as cores desejadas:</legend> 
+				<input type="checkbox" name="cores[]" id="azul" value="blue"> 
+                <label for="Amarelo">Amarelo</label> 
+                <input type="checkbox" name="cores[]" id="amarelo" value="yellow"> 
+                <label for="azul">Azul</label> 
+                <input type="checkbox" name="cores[]" id="verde" value="green"> 
+                <label for="verde">Verde</label> 
+            </fieldset> 
+            <fieldset> 
+                <legend>Selecione as marcas de carro desejadas:</legend> 
+                <input type="checkbox" name="marcas-carro[]" id="fiat" value="fiat"> 
+                <label for="Fiat">Fiat</label> 
+                <input type="checkbox" name="marcas-carro[]" id="ford" value="ford"> 
+                <label for="ford">Ford</label> 
+                <input type="checkbox" name="marcas-carro[]" id="fenemê" value="Fenemê"> 
+                <label for="fenemê">Fenemê</label> 
+            </fieldset> 
+            <fieldset> 
+                <legend>Sexo:</legend> 
+                <input type="radio" name="sexo" id="masc" value="masc"> 
+                <label for="masc">Masculino</label> 
+                <input type="radio" name="sexo" id="fem" value="fem"> 
+                <label for="fem">Feminino</label> 
+            </fieldset> 
+            <fieldset> 
+                <legend>Selecione a cidade residente:</legend> 
+                <select name="cidade" id="cidade"> 
+                    <option value="rio-do-Sul">Rio do Sul</option> 
+                    <option value="Ituporanga">Ituporanga</option> 
+                    <option value="lages">Lages</option> 
+                    <option value="mirim-doce">Mirim Doce</option> 
+                    <option value="taio">Taió</option> 
+                </select> 
+            </fieldset> 
+            <fieldset> 
+                <legend>Foto de Perfil:</legend> 
+                <input type="file" name="foto-perfil" id="foto-perfil"> 
+            </fieldset> 
+            <button type="reset">Limpar</button> 
+            <button type="submit">Enviar</button> 
+        </form> 
+    </main> 
+</body> 
+</html>
