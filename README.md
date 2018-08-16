@@ -1,13 +1,13 @@
 Instalado o Doker no Linux
 
 Lita de comandos
-1 - cd
-2 - wget -O instalador.sh http://get.docker.com
-3 - chmod a+x instalador.sh
-4 - ./instalador.sh (aguarde a instalação)
-5 - sudo apt-get install docker-compose
-6 - sudo usermod -aG docker unidavi (unidavi aqui significa o login do computador nos computadores da unidavi, se for fazer no seu computador altere para o nome do seu usuário no linux)
-7 - Reiniciar o Computador
+* cd
+* wget -O instalador.sh http://get.docker.com
+* chmod a+x instalador.sh
+* ./instalador.sh (aguarde a instalação)
+* sudo apt-get install docker-compose
+* sudo usermod -aG docker unidavi (unidavi aqui significa o login do computador nos computadores da unidavi, se for fazer no seu computador altere para o nome do seu usuário no linux)
+* Reiniciar o Computador
 
 
 --------------------------------------------------------------------------
