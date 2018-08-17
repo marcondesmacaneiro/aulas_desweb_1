@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercicio03</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h3>Exercicios html</h3>
+            <a href="..\index.html">HOME</a>
+            <a href="exercicio01.html">HTML 01</a>
+            <a href="exercicio02.html">HTML 02</a>
+            <a href="exercicio03.html">HTML 03</a>
+        </nav>
+
+    </header>
+
+    <br>
+    <br>
+
+    <section>
+
+        <form action="http://localhost:41065/marcondes/formcadastro.php" method="POST" enctype=“multipart/form­data”>
+            <fieldset>
+                <label for "cor">Selecione a cor:</label>
+                <input type="color" id="cor" name="cor" placeholder="João das Neves"><br>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <label>Selecione o Carro:</label>
+                <select name="cars" multiple>
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="fiat">Fiat</option>
+                    <option value="audi">Audi</option>
+                </select>
+            </fieldset>
+            <br>
+            <fieldset>
+                <label>Selecione o genero:</label>
+                <select name="sexo">
+                    <option value="feminino">Feminino</option>
+                    <option value="masculino">Masculino</option>
+                </select>
+            </fieldset>
+            <br>
+
+            <fieldset>
+                <label>Selecione a cidade:</label>
+                <select name="cidade">
+                    <option value="riodosul">Rio do sul</option>
+                    <option value="lontras">Lontras</option>
+                    <option value="agronomica">Agronomica</option>
+                    <option value="riodooeste">Rio do Oeste</option>
+                </select>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <label for "arquivo">Selecione o arquivo:</label>
+                <input type="file" id="arquivo" name="arquivo"><br>
+            </fieldset>
+
+            <br>
+            <fieldset>
+                <button type="submit">Enviar</button>
+                <input type="reset">
+
+            </fieldset>
+        </form>
+
+    </section>
+
+
+</body>
+
+</html>
