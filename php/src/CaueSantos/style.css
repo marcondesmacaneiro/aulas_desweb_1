@@ -1,14 +1,41 @@
 body{
     background-color: #fafafa;
 }
+.containerC{
+    background-color: #fafafa;
+    height: 860px;
+    border: 1px black dashed;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 h1{
     text-align: center;
     color: darkgreen;
     font-family: 'Rubik Mono One', sans-serif;
     font-size: 25pt;
 }
-.containerC{
+.titulos_padrao{
+    font-size: 19px;
+    font-family: 'Rubik Mono One', sans-serif;
+}
+.text_padrao{
+    color: darkgreen;
+}
+.divisoria_padrao{
+    border-color: darkgreen;
+    border-width: 2px;
+}
+.menu_{
+    border: solid black 1px;
+    padding: 10px;
+    margin: 5px;
+}
+li a{
+    color: darkgreen;
+    font-weight: bold;
+}
+li a:hover{
+    font-size: 18px;
+    color: darkgreen;
     background-color: #fafafa;
-    height: 905px;
-    border: 1px black dashed;
 }
