@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Atividade_3</title>
+</head>
+<body>
+    <div>
+        <form method="POST" action="http://localhost:41065/marcondes/formcadastro.php" target="_blank">
+            <fieldset>
+                <label>Cores</label><br/>
+                <input type="checkbox" name="laranja" value="cor1"> Laranja <br/>
+                <input type="checkbox" name="verde" value="cor2"> Verde <br/>
+                <input type="checkbox" name="rosa" value="cor3"> Rosa <br/>
+                <input type="checkbox" name="vermelho" value="cor4"> Vermelho <br/>
+                <input type="checkbox" name="azul" value="cor5"> Azul <br/>
+            </fieldset>
+            <fieldset>
+                <label>Marcas de Carro</label> <br/>
+                <input type="checkbox" name="volks" value="marca1"> Volks Wagen <br/>
+                <input type="checkbox" name="honda" value="marca2"> Honda <br/>
+                <input type="checkbox" name="nissan" value="marca3"> Nissan <br/>
+                <input type="checkbox" name="ford" value="marca4"> Ford <br/>
+            </fieldset>
+                
+            <fieldset>
+                <input type="radio" name="masculino" value="masc"> Masculino <br/>
+                <input type="radio" name="feminino" value="fem"> Feminino <br/>
+                <input type="radio" name="indefinido" value="ind"> Indefinido <br/>
+            </fieldset>
+
+            <fieldset>
+                <label>Cidades</label>
+                <input type="radio" name="pgetulio" value="pg"> P Getulio <br/>
+                <input type="radio" name="ibirama" value="ib"> Ibirama <br/>
+                <input type="radio" name="lontras" value="lon"> Lontras <br/>
+                <input type="radio" name="riodosul" value="rsl"> Rio do Sul  <br/>
+            </fieldset>
+
+            <fieldset>
+                <input type="file" name="fotodeperfil" value="foto">
+            </fieldset>
+            <input type="submit" name="enviar">
+            <input type="reset" name="cancelar">
+        </form>
+    </div>    
+</body>
+</html>
