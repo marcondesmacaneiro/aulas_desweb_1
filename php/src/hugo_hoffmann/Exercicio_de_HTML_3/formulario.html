@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Formulário</h1>
+    <form action="http://localhost:41065/marcondes/formcadastro.php" method="POST" name="form">
+        <fieldset>
+            <legend>Cores</legend>
+            <input id="azul" name="cor[]" type="checkbox" >
+            <label for="azul">Azul</label>
+            <input id="verde" name="cor[]" type="checkbox" >
+            <label for="verde">Verde</label>
+            <input id="preto" name="cor[]" type="checkbox" >
+            <label for="preto">Preto</label>
+            <input id="rosa" name="cor[]" type="checkbox" >
+            <label for="rosa">Rosa</label>
+        </fieldset>
+        <fieldset>
+            <legend>Marcas de carro</legend>
+            <input id="bmw" name="marca[]" type="checkbox" >
+            <label for="bmw">BMW</label>
+            <input id="ferrari" name="marca[]" type="checkbox" >
+            <label for="ferrari">Ferrari</label>
+            <input id="volvo" name="marca[]" type="checkbox" >
+            <label for="volvo">Volvo</label>
+            <input id="cherry" name="marca[]" type="checkbox" >
+            <label for="cherry">Cherry</label>
+        </fieldset>
+        <fieldset>
+            <legend>Sexo:</legend>
+            <input id="m" name="sexo" type="radio" >
+            <label for="m">Masculino</label>
+            <input id="f" name="sexo" type="radio" >
+            <label for="f">Feminino</label>
+        </fieldset>
+        <fieldset>
+            <legend>Cidades:</legend>
+            <select>
+                <option value="florianopolis">Florianopolis</option>
+                <option value="riodosul">Rio do Sul</option>
+                <option value="ituporanga">Ituporanga</option>
+                <option value="Leobetoleal" selected>Leoberto Leal</option>
+            </select> 
+        </fieldset>
+        <fieldset>
+            <legend>Foto:</legend>
+            <input name="perfil" type="file">
+        </fieldset>
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpar</button>
+    </form>
+
+</body>
+</html>
