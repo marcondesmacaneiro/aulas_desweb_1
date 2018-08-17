@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   <header>
+       <h1>Formulário</h1>
+   </header>
+   <section>
+       <form action="http://localhost:41065/marcondes/formcadastro.php" method="POST" target="_blank">
+           <fieldset name="cor">
+               <h1>Selecione uma ou mais cores</h1>
+               <input type="checkbox" name="cores" id="vermelho" value="vermelho">
+               <label for="vermelho">Vermelho</label>
+               <input type="checkbox" name="cores" id="azul" value="azul">
+               <label for="azul">azul</label>
+               <input type="checkbox" name="cores" id="verde" value="verde">
+               <label for="verde">verde</label>
+               <input type="checkbox" name="cores" id="amarelo" value="amarelo">
+               <label for="amarelo">amarelo</label>
+               
+           </fieldset>
+
+           <fieldset name="carro">
+                <h1>Selecione uma ou mais marcas de carro</h1>
+                <input type="checkbox" name="carros" id="fiat" value="fiat">
+                <label for="fiat">fiat</label>
+                <input type="checkbox" name="carros" id="ford" value="ford">
+                <label for="ford">ford</label>
+                <input type="checkbox" name="carros" id="wolkswagen" value="wolkswagen">
+                <label for="wolkswagen">wolkswagen</label>
+                <input type="checkbox" name="carros" id="toyota" value="toyota">
+                <label for="toyota">toyota</label>
+           </fieldset>
+           <fieldset name="sexo">
+                <h1>Sexo</h1>
+                <input type="radio" name="sexo" id="masc" value="M">
+                <label for="masc">Masculino</label>
+                <input type="radio" name="sexo" id="fem" value="F">
+                <label for="fem">Feminino</label>
+                <input type="radio" name="sexo" id="outro" value="O">
+                <label for="outro">Outro</label>
+           </fieldset>
+           <fieldset name="Cidades">
+               <h1>Selecione a sua cidade de residência</h1>
+                <select name="cidade" id="cidade">
+                    <option value="riodosul">Rio do Sul</option>
+                    <option value="vidalramos">Vidal Ramos</option>
+                    <option value="imbuia">Imbuia</option>
+                    <option value="ituporanga">Ituporanga</option>
+                </select>
+            </fieldset>
+            <fieldset name="arquivo">
+               <h1>Selecione uma foto de perfil</h1>
+               <input type="file" name="foto" id="foto">
+            </fieldset>
+            <fieldset name="botao">
+                <button type="reset">LIMPAR FORMULÁRIO</button>
+                <button type="submit">ENVIAR FORMULÁRIO</button>
+            </fieldset>
+       </form>
+   </section>
+</body>
+</html>
