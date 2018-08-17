@@ -1,0 +1,14 @@
+body{
+    background-color: #fafafa;
+}
+h1{
+    text-align: center;
+    color: darkgreen;
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 25pt;
+}
+.containerC{
+    background-color: #fafafa;
+    height: 905px;
+    border: 1px black dashed;
+}
