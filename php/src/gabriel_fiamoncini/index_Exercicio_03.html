@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Formulario de Cadastro</h1>
+    <form action="http://localhost:41065/marcondes/formcadastro.php" method="POST">
+        <fieldset>
+            <label>Selecione a Cor</label>
+            <input type="color">
+        </fieldset>
+        <br>
+        <fieldset>
+            <label>Lista de Carro</label>
+            <select name="carros">
+                <option value="Ferrari">Ferrari</option>
+                <option value="Fusca">Fusca</option>
+                <option value="Golf">Golf</option>
+                <option value="Audi">Audi</option>
+            </select>
+        </fieldset>
+        <br>
+        <fieldset>
+            <label>Sexo</label>
+            <br>
+            <input type="radio" name="gender" value="M" checked> Masculino
+            <br>
+            <input type="radio" name="gender" value="F"> Feminino
+            <br>
+            <input type="radio" name="gender" value="O"> Outros
+        </fieldset>
+        <br>
+        <fieldset>
+            <label>Cidades</label>
+            <br>
+            <select name="carros">
+                <option value="Rio do Sul">Rio do Sul</option>
+                <option value="Rio do Oeste">Rio do Oeste</option>
+                <option value="Aurora">Aurora</option>
+                <option value="Imbuia">Imbuia</option>
+            </select>
+        </fieldset>
+        <br>
+        <fieldset>
+            <label>Arquivo</label>
+            <br>
+            <input type="file" id="arquivo" name="arquivo" value="Enviar">
+        </fieldset>
+        <br>
+        <input type="submit" formaction="cadastro.php" value="Enviar">
+        <input type="reset" value="Limpar">
+    </form>
+</body>
+
+</html>
