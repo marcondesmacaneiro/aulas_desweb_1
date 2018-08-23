@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulário</title>
+</head>
+<body>
+    <header>
+        <h1>Formulário</h1>
+    </header>
+    <main>
+        <form>
+            <fieldset>
+                <legend>Selecione As Cores:</legend>
+                <input type="checkbox" name="cores[]" id="vermelho" value="red">
+                <label for="vermelho">Vermelho</label>
+                <input type="checkbox" name="cores[]" id="azul" value="blue">
+                <label for="azul">Azul</label>
+                <input type="checkbox" name="cores[]" id="preto" value="black">
+                <label for="preto">Preto</label>
+                <input type="checkbox" name="cores[]" id="branco" value="white">
+                <label for="branco">Branco</label>
+            </fieldset>
+            <fieldset>
+                <legend>Selecione As Marcas:</legend>
+                <input type="checkbox" name="marcas-carro[]" id="volkswagen" value="volkswagen">
+                <label for="volkswagen">Volkswagen</label>
+                <input type="checkbox" name="marcas-carro[]" id="hyundai" value="hyundai">
+                <label for="hyundai">Hyundai</label>
+                <input type="checkbox" name="marcas-carro[]" id="ford" value="ford">
+                <label for="ford">Ford</label>
+                <input type="checkbox" name="marcas-carro[]" id="chevrolet" value="chevrolet">
+                <label for="chevrolet">Chevrolet</label>
+            </fieldset>
+            <fieldset>
+                <legend>Cidade Que Reside: </legend>
+                <select name="Cidades" id="Cidade">
+                    <option>Selecione...</option>
+                    <option value="1">Ituporanga</option>
+                    <option value="2">Aurora</option>
+                    <option value="3">Rio do Sul</option>
+                    <option value="4">Imbuia</option>
+                    <option value="5">Vidal Ramos</option>
+                    <option value="6">Lontras</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Sexo:</legend>
+                <input type="radio" name="sexo" id="masc" value="masc">
+                <label for="masc">Masculino</label>
+                <input type="radio" name="sexo" id="fem" value="fem">
+                <label for="fem">Feminino</label>
+            </fieldset>
+            <fieldset>
+                <legend>Foto:</legend>
+                <input type="file" name="foto-perfil" id="foto-perfil">
+            </fieldset>
+            <button type="reset">Limpar</button>
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+</body>
+</html>
