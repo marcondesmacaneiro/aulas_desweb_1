@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulário Cadastro</title>
+</head>
+<body>
+    <h2>Formulário de Cadastro</h2>
+    <form id="form" method="POST" action="http://localhost:41065/marcondes/formcadastro.php">
+       
+        <fieldset>
+            <label>Lista de Cores</label>
+            <br/>
+            <input type="checkbox" value="Amarelo">Amarelo</input>
+            <br/>
+            <input type="checkbox" value="Vermelho">Vermelho</input>
+            <br/>
+            <input type="checkbox" value="Azul">Azul</input>
+            <br/>
+            <input type="checkbox" value="Preto">Preto</input>
+        </fieldset><br/>
+        <fieldset>
+        <label>Lista de Carros</label>
+        <br/>
+            <input type="checkbox" value="Uno">Uno</input>
+            <br/>
+            <input type="checkbox" value="Corsa">Corsa</input>
+            <br/>
+            <input type="checkbox" value="Gol">Gol</input>
+            <br/>
+            <input type="checkbox" value="Palio">Palio</input>
+        </fieldset><br/> 
+        <fieldset>
+            <label for="sexo">Sexo</label>
+            <br/>
+            <select name="sexo" value="">
+                <option value "">Selecione o Sexo</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Feminino">Feminino</option>
+            </select>
+        </fieldset><br/>
+        <fieldset>
+            <label for="cidade">Cidades</label>
+            <br/>
+            <select name="cidade" value="">
+                <option value "">Selecione uma cidade</option>
+                <option value="Rio do sul">Rio do sul</option>
+                <option value="Laurentino">Laurentino</option>
+                <option value="Rio do Oeste">Rio do Oeste</option>
+            </select>
+        </fieldset><br/>
+        <fieldset>
+            <label for="foto">Foto</label>
+            <br/>
+            <input type="file"/>
+        </fieldset>
+
+        <input type="submit" value="Enviar"/>
+        <input type="reset" value="Cancelar"/>
+    </form>
+    
+</body>
+</html>
