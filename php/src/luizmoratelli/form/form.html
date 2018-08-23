@@ -11,7 +11,7 @@
         <h1>Formulário</h1>
     </header>
     <main>
-        <form action="http://localhost:41065/marcondes/formcadastro.php" method="POST" target="_blank">
+        <form action="http://localhost:41065/marcondes/formcadastro.php" method="POST" target="_blank" enctype=“multipart/form­data”>
             <fieldset>
                 <legend>Selecione as cores desejadas:</legend>
                 <input type="checkbox" name="cores[]" id="vermelho" value="red">
@@ -39,13 +39,13 @@
             </fieldset>
             <fieldset>
                 <legend>Selecione a cidade residente:</legend>
-                <select name="cidade" id="cidade">
-                    <option value="rio-do-oeste">Rio do Oeste</option>
-                    <option value="rio-do-sul">Rio do Sul</option>
-                    <option value="laurentino">Laurentino</option>
-                    <option value="agronomica">Agronômica</option>
-                    <option value="taio">Taió</option>
-                </select>
+                <input type="radio" name="cidade" id="rio-do-oeste" value="rio-do-oeste">
+                <label for="rio-do-oeste">Rio do Oeste</label>
+                <input type="radio" name="cidade" id="rio-do-sul" value="rio-do-sul">
+                <label for="rio-do-sul">Rio do Sul</label>
+                <input type="radio" name="cidade" id="laurentino" value="laurentino">
+                <label for="laurentino">Laurentino</label>
+                <input type="radio" name="cidade" id="agronomica" value="agronomica">
             </fieldset>
             <fieldset>
                 <legend>Foto de Perfil:</legend>
