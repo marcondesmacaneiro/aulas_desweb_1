@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible">
+        <title>Cadastro</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body> 
+        <form name="frmClientes" method="POST" action="http://localhost:41065/marcondes/formcadastro.php" target="_blanc" enctype="multipart/form-data">
+            <h2>Formulario de Cadastro</h2>
+            <hr />
+            <fieldset style="background-color: lightgray">
+                <table>
+                    <tr>
+                        <td><strong>Selecione Suas Cores Favoritas</strong></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" value="SC" />Vermelho</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" value="SC" />Azul</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" value="SC" />Verde</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" value="SC" />Amarelo</td> 
+                    </tr>
+                    <tr>
+                        <td><input type="Checkbox" value="SC"/>Preto</td>
+                    </tr>
+                </table>
+            </fieldset> 
+            <hr />
+            <fieldset style="background-color: lightgray">
+                    <table>
+                        <tr>
+                            <td><strong>Selecione Seus Carros Favoritos</strong></td>
+                        </tr>
+                        <tr>
+                            <td><input name="carro" type="checkbox" value="SC" />Palio</td>
+                        </tr>
+                        <tr>
+                            <td><input name="carro" type="checkbox" value="SC" />Gol</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" value="SC" />Celta</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" value="SC" />Corsa</td>
+                        </tr>
+                        <tr>
+                            <td><input type="Checkbox" value="SC"/>Vectra</td>
+                        </tr>
+                    </table>
+                </fieldset>
+                <hr />
+                <fieldset style="background-color: lightgray">
+                    <table>
+                        <tr>
+                            <td><strong>Selecione Seu Sexo</strong></td>
+                        </tr>
+                        <tr>
+                            <td><input name="sexo" type="radio" value="SC" />Masculino</td>
+                        </tr>
+                        <tr>
+                            <td><input name="sexo" type="radio" value="SC" />Feminino</td>
+                        </tr>
+                    </table>
+                </fieldset>
+                <hr />
+                <fieldset style="background-color: lightgray">
+                        <table>
+                            <tr>
+                                <td><strong>Selecione a Cidade que Você Mora</strong></td>
+                            </tr>
+                            <tr>
+                                <td><input name="cidade" type="radio" value="SC" />Rio do Sul</td>
+                            </tr>
+                            <tr>
+                                <td><input name="cidade" type="radio" value="SC" />Lontras</td>
+                            </tr>
+                            <tr>
+                                <td><input name="cidade" type="radio" value="SC" />Ituporanga</td>
+                            </tr>
+                            <tr>
+                                <td><input name="cidade" type="radio" value="SC" />Aurora</td>
+                            </tr>
+                            <tr>
+                                <td><input name="cidade" type="radio" value="SC"/>Ibirama</td>
+                            </tr>
+                            <tr>
+                                <td><input name="cidade" type="radio" value="SC"/>Outras</td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                    <fieldset style="background-color: lightgray">
+                        <p><strong>Envie Sua Foto de Perfil</strong></p>
+                        <input name="foto" type="file"/>
+                    </fieldset>
+                <hr />
+                <fieldset style="background-color: lightgray">
+                    <p><strong>Clique no Botão Abaixo Para Terminar Seu Cadastro</strong></p>
+                    <input type="submit" value="submit"/>
+                </fieldset>
+                <hr />
+                <fieldset style="background-color: lightgray">
+                    <p><strong>Clique no Botão Para Limpar os dados de cadastro</strong></p>
+                    <input type="reset" value="reset"/>
+                </fieldset>
+        </form>
+    </body>
+</html>
