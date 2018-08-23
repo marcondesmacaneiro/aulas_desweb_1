@@ -1,6 +1,12 @@
-.GC_Normal{font-size: 10px;font-family: Verdana, Arial, Helvetica, sans-serif;
-    color: #858495;text-decoration: none;font-weight: bold;
-    text-align: left;vertical-align: top;}
+.GC_Normal{
+    font-size: 10px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #858495;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: left;
+    vertical-align: top;
+}
 
 .conteudo_titulo{
 font-family: Arial, Helvetica, sans-serif;
