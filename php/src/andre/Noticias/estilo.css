@@ -1,0 +1,67 @@
+body {
+    background: #2c80a7 url(https://st2.depositphotos.com/1829203/5489/v/950/depositphotos_54890777-stock-illustration-colorful-abstract-polygonal-triangle-background.jpg);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, sans-serif;
+    line-height: 1.6em;
+}
+.container {
+    margin: 0 auto;
+    width: 960px; 
+}
+
+.container h1 {
+    text-align: center;
+}
+
+.noticias {
+    float: left;
+    width: 660px;
+}
+.noticia {
+    float: right;
+    background: #fff;
+    margin-bottom: 20px;
+    padding: 5px;
+    border: 1px solid #ddd;
+}
+
+.noticia h2 {
+    border-bottom: 1px dashed #6ad161;
+    margin: 0;
+}
+.noticia img {
+    border: 1px solid #444444;
+    float: left;
+    margin: 10px 10px 0 0;
+    padding: 2px;
+}
+.noticia p {
+    text-align: justify;
+}
+
+.rodape {
+    font-size: 1.8em;
+    text-align: center;
+}
+.clear {
+    clear: both;
+}
+
+.barralateral {
+    background: #e9414f;
+    border: 1px solid #000;
+    float: right;
+    padding: 10px;
+    width: 260px;
+
+}
+
+.barralateral h3 {
+    font-size: 1.8em;
+    margin-top: 0;
+
+}
+
+.barralateral ol {
+
+    font-size: 1.2em;
+}
