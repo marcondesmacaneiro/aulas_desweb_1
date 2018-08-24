@@ -1,3 +1,33 @@
 body{
     background: #b17741 url(fundo.png);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 1.6em;
+}
+
+.container {
+    margin: 0 auto;
+    width: 960px;
+}
+
+.noticias{
+    float: left;
+    width: 660px;
+}
+
+.noticia{
+    float: right;
+    background-color: #ffff;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid gray;
+}
+
+.noticia h2{
+    border-bottom: 1px dashed rgb(231, 72, 23);
+    margin: 0;
+}
+
+.noticia img{
+    border: 1px solid rgb(18, 95, 211);
+    float: left;
 }
