@@ -9,6 +9,10 @@ body{
     width: 960px;
 }
 
+.container h1{
+    text-align: center;
+}
+
 .noticias{
     float: left;
     width: 660px;
@@ -30,4 +34,32 @@ body{
 .noticia img{
     border: 1px solid rgb(18, 95, 211);
     float: left;
+    margin: 10px 10px 0px 0px;
+    padding: 2px; 
+}
+
+.rodape{
+    font-size: 1.8em;
+    text-align: center;
+}
+
+.clear {
+    clear: both;
+}
+
+.barralateral{
+    background-color: rgb(153, 43, 156);
+    border: 1px solid black;
+    float: right;
+    padding: 10px;
+    width: 260px;
+}
+
+.barralateral h3{
+    font-size: 1.8em;
+    margin-top: 0px;
+}
+
+.barralateral ol{
+    font-size: 1.2em;
 }
