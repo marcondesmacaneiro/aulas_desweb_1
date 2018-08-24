@@ -27,6 +27,7 @@ body{
 }
 
 .noticia h2{
+    text-align: center;
     border-bottom: 1px dashed rgb(231, 72, 23);
     margin: 0;
 }
@@ -56,6 +57,7 @@ body{
 }
 
 .barralateral h3{
+    text-align: center;
     font-size: 1.8em;
     margin-top: 0px;
 }
