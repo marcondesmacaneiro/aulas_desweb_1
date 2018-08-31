@@ -12,11 +12,11 @@ body {
     text-align: center;
 }
 
-.noticias {
+section {
     float: left;
     width: 660px;
 }
-.noticia {
+article {
     float: right;
     background: #fff;
     margin-bottom: 20px;
@@ -24,21 +24,21 @@ body {
     border: 1px solid #ddd;
 }
 
-.noticia h2 {
+article h2 {
     border-bottom: 1px dashed #6ad161;
     margin: 0;
 }
-.noticia img {
+article img {
     border: 1px solid #444444;
     float: left;
     margin: 10px 10px 0 0;
     padding: 2px;
 }
-.noticia p {
+article p {
     text-align: justify;
 }
 
-.rodape {
+footer {
     font-size: 1.8em;
     text-align: center;
 }
@@ -46,7 +46,7 @@ body {
     clear: both;
 }
 
-.barralateral {
+aside {
     background: #e9414f;
     border: 1px solid #000;
     float: right;
@@ -55,13 +55,13 @@ body {
 
 }
 
-.barralateral h3 {
+aside h3 {
     font-size: 1.8em;
     margin-top: 0;
 
 }
 
-.barralateral ol {
+aside ol {
 
     font-size: 1.2em;
 }
