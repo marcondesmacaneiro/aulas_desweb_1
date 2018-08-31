@@ -4,7 +4,7 @@ body {
     line-height: 1.6em
 }
 
-body {
+div {
     margin: 0 auto;
     width: 960px;
 }
@@ -21,20 +21,16 @@ article {
     border: 1px solid rgba(170, 170, 170, 0.493);
 }
 
-article h2 {
+.noticia h2 {
     border-bottom: 1px double rgba(105, 105, 105, 0.137);
     margin: 0;
 }
 
-article img{ 
+.noticia img{ 
     border: 1px solid rgba(121, 121, 121, 0.671);
     float: left;
     margin: 10px 10px 0px 0px;
     padding: 2px
-}
-
-.clear {
-    clear: both;
 }
 
 footer {
@@ -42,6 +38,9 @@ footer {
     text-align: center;
 }
 
+.clear {
+    clear: both;
+}
 
 aside {
     background-color: rgba(107, 107, 107, 0.068);

@@ -1,0 +1,4 @@
+.tip::before{
+    content: '\261E';
+    margin-right: 10px;
+}
