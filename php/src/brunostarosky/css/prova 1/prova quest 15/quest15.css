@@ -1,0 +1,15 @@
+.verde{
+    color: green;
+}
+
+.azul{
+    color: blue;
+}
+
+.box{
+    width: 1000px;
+    height: 1000px;
+    margin: 25px;
+    padding: none;
+    background-color: red;
+}

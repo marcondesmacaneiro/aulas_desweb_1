@@ -1,0 +1,9 @@
+.visitado:visited {
+    color: yellow;
+}
+.nao-visto:link {
+    color: red;
+}
+.sobre:hover {
+    color: green;
+}
