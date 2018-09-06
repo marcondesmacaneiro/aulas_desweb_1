@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+.sem-padding {
+    background-color: blue;
+    width: 250px;
+}
+.com-padding {
+    background-color: red;
+    width: 250px;
+    padding: 0 25px;
+}
+h1::before {
+    
+}
