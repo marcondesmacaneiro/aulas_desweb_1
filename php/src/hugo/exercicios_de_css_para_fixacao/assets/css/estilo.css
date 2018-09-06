@@ -1,0 +1,15 @@
+div{
+    /*Alinhando a div ao centro da tela, a mesma possui 500px por 500px*/
+    background: blue;
+    height: 500px;
+    width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;      
+    margin-top: -250px;
+    margin-left: -250px;
+}
+p{
+    text-align: center;
+    font-size: 18px;
+} 

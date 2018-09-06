@@ -7,36 +7,36 @@ html{
     margin: 0 auto;
     width: 60%;
 }
-.noticias{
+section{
     float: left;
     width: 70%;
 }
-.noticia{
+article{
     float: right;
     background-color: #8eb7f9;
     margin-bottom: 20px;
     padding: 10px;
 }
-.noticia h2{
+article h2{
     border-bottom: 2px dashed darkblue; 
     color: #023991;
     margin: 0;
     margin-bottom: 5px;
 }
-.noticia img{
+article img{
     border: 3px solid #023991;
     float: left;
     margin:5px 25px 0px 5px;
     padding: 2px;
 }
-.rodape{
+footer{
     font-size: 1.8em;
     text-align: center;
 }
 .clear{
     clear: both;
 }
-.barralateral{
+aside{
     background-color: #023991;
     color: white;
     border: solid 1px white;
@@ -45,7 +45,7 @@ html{
     float: right;
     margin-right: 110px;
 }
-.barralateral h3{
+aside h3{
     font-size: 1.8em;
     margin-top: 0;
 }
