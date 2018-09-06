@@ -5,6 +5,13 @@ body {
 
 }
 
+@media screen and (max-width: 800px) and (min-width: 520px) {
+    * {
+    color: #000 !important; 
+    border-color: #000 !important;
+    }
+    }
+
 .container {
     margin: 0 auto;
     width: 960px;
