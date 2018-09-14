@@ -1,5 +1,5 @@
 * {
-    box-sizing: border-box;
+    box-sizing: border-box; /* Normaliza o tamanho */
 }
 .sem-padding {
     background-color: blue;
@@ -9,7 +9,4 @@
     background-color: red;
     width: 250px;
     padding: 0 25px;
-}
-h1::before {
-    
 }
