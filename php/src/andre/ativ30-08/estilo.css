@@ -25,7 +25,7 @@ h1::before{
     top: -10px;
 }
 h1::after {
-    border-color: transparent #7C0000 #7C0000 transparent;
+    border-color:  transparent transparent #7C0000 #7C0000;
     border-style: solid;
     border-width: 5px;
     content: '';
@@ -51,4 +51,29 @@ h1::after {
     margin-top: -14px;
     position: absolute;
     top: 50%;
+}
+.help::after {
+    border-color: transparent transparent transparent #d3cdae;
+    border-style: solid;
+    border-width: 14px;
+    content: '';
+    right: -28px;
+    margin-top: -14px;
+    position: absolute;
+    top: 50%;
+}
+
+.tip::before {
+
+    content: "\261E";
+    margin-right: 10px;
+
+}
+@media print {
+
+*{
+    background: transparent !important;
+    color: #000 !important;
+}
+
 }

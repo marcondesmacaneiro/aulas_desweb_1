@@ -1,50 +1,61 @@
 body {
-    background: #b82b2b url(../img/fundo.png);
+    background: url(fundo.jpg);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    line-height: 1.6em;
+    line-height: 1.6em
 }
-main {
+
+body {
     margin: 0 auto;
     width: 960px;
 }
+
 section {
     float: left;
     width: 660px;
 }
+
 article {
-    background-color: #ffffff;
+    background-color: #fff;
     margin-bottom: 20px;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid rgba(170, 170, 170, 0.493);
 }
+
 article h2 {
-    border-bottom: 1px dashed rgb(35, 19, 177);
+    border-bottom: 1px double rgba(105, 105, 105, 0.137);
     margin: 0;
 }
-article img {
-    border: 1px solid rgb(224, 221, 18);
+
+article img{ 
+    border: 1px solid rgba(121, 121, 121, 0.671);
     float: left;
-    margin: 10px 10px 0 0;
-    padding: 2px;
+    margin: 10px 10px 0px 0px;
+    padding: 2px
 }
+
+.clear {
+    clear: both;
+}
+
 footer {
     font-size: 1.8em;
     text-align: center;
 }
-.clear {
-    clear: both;
-}
+
+
 aside {
-    background-color: rgb(230, 94, 135);
-    border: 1px solid rgb(155, 59, 87);
+    background-color: rgba(107, 107, 107, 0.068);
+    border: 1px solid rgba(88, 88, 88, 0.459);
     float: right;
     padding: 10px;
     width: 260px;
 }
+
 aside h3 {
     font-size: 1.8em;
     margin-top: 0;
 }
+
 aside ol {
     font-size: 1.2em;
 }
