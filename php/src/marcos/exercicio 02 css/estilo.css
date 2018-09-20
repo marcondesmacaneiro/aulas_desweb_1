@@ -1,0 +1,51 @@
+body {
+    background: darkblue url(fundo.jpg);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 1.6em;
+}
+.container {
+    margin: 0 auto;
+    width: 960px;
+}
+.noticias {
+    float: left;
+    width: 660px;
+
+}
+.noticias {
+    background-color: azure;
+    margin-bottom: 28px;
+    padding: 20px;
+    border: 1px solid #ccc   
+}
+.noticias h2 {
+    border-bottom: 1px dashed rgb(red, green, blue);
+    margin: 0;
+  }
+  .noticias img {
+    border: #656297;
+    float: left;
+    margin: 10px 10px 0px 10px;
+    padding: 2px;
+  }
+  .rodapé {
+    font-size: 1.8em;
+    font-align: center;
+  }
+  .clear {
+    clear: both;
+  }
+  .barralateral{
+    background-color: aquamarine;
+    border: 1px solid #aaaaaa;
+    float: right;
+    padding: 10px;
+    width: 260px
+  }
+  .barralateral h3{
+    font-size: 1.8em;
+    margin-top: 0;
+  }
+  .barralateral ol {
+    font-size: 1.2em;
+  }

@@ -1,0 +1,35 @@
+@font-face{
+    font-family: 'Slabo 27px';
+    
+
+}
+
+.button{
+    background-color: gray;
+    color: white;
+    display: inline-block;
+    font-weight: bolder;
+    padding: 0.5em 1em;
+    text-decoration: none;
+}
+
+.primary-button{
+    background-color: gray;
+}
+
+.big-button{
+    font-size: 1.1em;
+}
+
+.small-button{
+    font-size: 0.9em;
+}
+
+.h1{
+    font-family: 'Slabo 27px';
+}
+
+.h2{
+    font-family: 'Slabo 27px';
+}
+

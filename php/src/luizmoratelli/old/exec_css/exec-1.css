@@ -1,0 +1,17 @@
+.main {
+    position: relative;
+    width: 98vw;
+    height: 98vh;
+}
+.center {
+    text-align: center;
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    padding: 5px; 
+    background-color: red;
+}
