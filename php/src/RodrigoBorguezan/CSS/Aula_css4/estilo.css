@@ -1,0 +1,10 @@
+section{
+  border: 1px solid #0000;
+  height: 100px;
+  margin: 40px auto;
+  width: 400px;
+}
+h1{
+  font-size: 1.2em;
+  text-align: center; 
+}
