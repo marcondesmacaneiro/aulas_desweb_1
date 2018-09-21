@@ -1,102 +1,107 @@
-*{
-    margin: 0px;
-    padding: 0px;
-}
-.container{
-    left: 15%;
-    border: 1px solid #000000;
-    position: absolute;
-    width: 70%;
-    text-align: center;
-    border-radius: 5%;
-    background-color: lightgray;
+@media screen and (max-width: 800px) and (min-width: 520px) {
+    
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    .container{
+        left: 15%;
+        border: 1px solid #000000;
+        position: absolute;
+        width: 70%;
+        text-align: center;
+        border-radius: 5%;
+        background-color: lightgray;
+    }
+
+    footer {
+        color: #000000;
+        font-style: italic;
+        font-size: 0.6em;
+        width: auto; 
+    }
+    a{
+        text-decoration: none;
+        color: darkred;
+    }
+    nav ul li{
+        background:lightslategray;
+        width: 20%;
+        height: 40px;
+        float: left;
+        color:white;
+        list-style: none;
+        padding-top: 10px;
+        text-align: center;
+        cursor:pointer;
+        font-size: 1.8em;
+    }
+
+    nav ul li:hover{
+        background-color: lightgrey;
+    }
+
+    dd {
+        text-align: center;;
+        color: darkred;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .texto {
+        text-align: justify;
+        font-size: 1.2em;
+        color: darkred;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    header{ 
+        background-color: gray;
+    }
+
+    .titulo{
+        font-size: 3.9em;
+        font-style: italic;
+        font-family: gabriola;
+        text-align: center;
+        color: darkred;
+    }
+    .indice{
+        text-align: center;
+        font-size: 1.1em;
+        list-style: none;
+    }
+    dt{
+        font-size: 1.6em;
+        color: darkred;
+        font-style: bolder;
+    }
+    .subtitulo{
+        font-size: 1.4em;
+        color: darkred;
+        text-decoration: bolder;
+    }
+    legend{
+        text-align: left;
+        color: darkred;
+        font-size: 0.8em;
+    }
+    form{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    form{
+        text-align: left;
+    }
+    label{
+        color: darkred;
+    }
+    input{
+        width: 100%;
+        background-color: lightgray;
+    }
+    .telefone , .celular {
+        width: 42%;
+    }
 }
 
-footer {
-    color: #000000;
-    font-style: italic;
-    font-size: 0.6em;
-    width: auto; 
-}
-a{
-    text-decoration: none;
-    color: darkred;
-}
-nav ul li{
-    background:lightslategray;
-    width: 20%;
-    height: 40px;
-    float: left;
-    color:white;
-    list-style: none;
-    padding-top: 10px;
-    text-align: center;
-    cursor:pointer;
-    font-size: 1.8em;
-}
 
-nav ul li:hover{
-    background-color: lightgrey;
-}
-
-dd {
-    text-align: center;;
-    color: darkred;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-.texto {
-    text-align: justify;
-    font-size: 1.2em;
-    color: darkred;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-header{
-    background-color: gray;
-}
-
-.titulo{
-    font-size: 3.9em;
-    font-style: italic;
-    font-family: gabriola;
-    text-align: center;
-    color: darkred;
-}
-.indice{
-    text-align: center;
-    font-size: 1.1em;
-    list-style: none;
-}
-dt{
-    font-size: 1.6em;
-    color: darkred;
-    font-style: bolder;
-}
-.subtitulo{
-    font-size: 1.4em;
-    color: darkred;
-    text-decoration: bolder;
-}
-legend{
-    text-align: left;
-    color: darkred;
-    font-size: 0.8em;
-}
-form{
-    padding-left: 10px;
-    padding-right: 10px;
-}
-form{
-    text-align: left;
-}
-label{
-    color: darkred;
-}
-input{
-    width: 100%;
-    background-color: lightgray;
-}
-.telefone , .celular {
-    width: 42%;
-}
