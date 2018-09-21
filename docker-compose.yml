@@ -5,6 +5,23 @@ services:
     container_name: php-aulasweb1
     restart: always
     volumes:
-    - ./php:/var/php
+      - ./php:/var/php
     ports:
-    - 41065:80
+      - 41065:80
+  mysql:
+    build: mysql
+    container_name: mysql-aulasweb1
+    restart: always
+    volumes:
+      - ./mysql/data:/var/lib/mysql
+    ports:
+      - 3310:3306
+  app:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: phpmyadmin-aulasweb1
+    links:
+      - mysql
+    ports:
+      - 8091:80
+    environment:
+      - PMA_ARBITRARY=1
