@@ -6,6 +6,9 @@ services:
     restart: always
     volumes:
       - ./php:/var/php
+    links:
+      - mysql
+      - postgres
     ports:
       - 41065:80
   mysql:
@@ -16,6 +19,16 @@ services:
       - ./mysql/data:/var/lib/mysql
     ports:
       - 3310:3306
+  postgres:
+    image: postgres:9.6.10-alpine
+    container_name: postgres-aulasweb1
+    restart: always
+    volumes:
+      - ./postgres/data:/var/lib/postgresql/data
+    ports:
+      - 5454:5432
+    environment:
+      POSTGRES_PASSWORD: postgres
   app:
     image: phpmyadmin/phpmyadmin:latest
     container_name: phpmyadmin-aulasweb1
@@ -25,3 +38,13 @@ services:
       - 8091:80
     environment:
       - PMA_ARBITRARY=1
+  phppgadmin:
+    image: zhajor/docker-phppgadmin
+    container_name: phppgadmin-aulasweb1
+    links:
+      - postgres
+    ports:
+      - 8092:80
+    environment:
+      - DB_HOST=postgres
+      - DB_PORT=5432
