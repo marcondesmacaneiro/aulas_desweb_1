@@ -1,0 +1,114 @@
+<link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
+<link href="https://fonts.googleapis.com/css?family=Mukta" rel="stylesheet">
+<style>
+    @media print {
+        * {
+            color: green;
+        }
+    }
+    @media (min-width: 1200px) {
+        .filho {
+            background-color: yellow;
+        }
+    }
+    @font-face {
+        font-family: 'Lobster';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Lobster'), url('lobster.woff') format('woff');
+    }
+    .pai {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+    .filho {
+        position: absolute;
+        font-family: 'Lobster';
+        width: 500px;
+        height: 500px;
+    }
+    .filho::before {
+        border-color: transparent blue transparent transparent;
+        border-width: 10px;
+        border-style: solid;
+        position: absolute;
+        left: 0px;
+        content: '';
+    }
+    .teste {
+        top: 0;
+        left: 0;
+    }
+    .teste2 {
+        top: 0;
+        right: 0;
+    }
+    .teste3 {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .teste4 {
+        bottom: 0;
+        left: 0;
+    }
+    .teste5 {
+        bottom: 0;
+        right: 0;
+    }
+    .box-sizing {
+        box-sizing: border-box;
+    }
+    .com-padding {
+        width: 500px;
+        background-color: red;
+        padding: 5px 0 0 0;
+    }
+    .sem-padding {
+        width: 500px;
+        background-color: blue;
+    }
+    nav ul {
+        list-style: none;
+    }
+    nav ul li {
+        display: inline;
+    }
+</style>
+<header>
+</header>
+<main>
+    <nav>
+        <ul>
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+        </ul>
+    </nav>
+    <section>
+        <article></article>
+        <article></article>
+        <article></article>
+    </section>
+    <section>
+        <div class="pai">
+            <div class="filho teste">Teste</div>
+            <div class="filho teste2">Teste 2</div>
+            <div class="filho teste3">Teste 3</div>
+            <div class="filho teste4">Teste 4</div>
+            <div class="filho teste5">Teste 5</div>
+        </div>
+        <div class="box-sizing">
+            <p class="com-padding">AA</p>
+            <p class="sem-padding">BB</p>
+        </div>
+    </section>
+    <aside></aside>
+</main>
+<footer>
+
+</footer>
