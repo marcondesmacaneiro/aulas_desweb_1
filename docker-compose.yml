@@ -19,6 +19,15 @@ services:
       - ./mysql/data:/var/lib/mysql
     ports:
       - 3310:3306
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: phpmyadmin-aulasweb3
+    links:
+      - mysql
+    ports:
+      - 8094:80
+    environment:
+      - PMA_ARBITRARY=1
   postgres:
     image: postgres:9.6.10-alpine
     container_name: postgres-aulasweb1
