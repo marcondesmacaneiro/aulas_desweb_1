@@ -14,7 +14,7 @@
                 margin: 20% auto auto auto;
                 padding: 20px 10px 10px 10px;
                 width: 50%;
-                text-align: center;
+                text-align: right;
             }
         </style>
     </head>
