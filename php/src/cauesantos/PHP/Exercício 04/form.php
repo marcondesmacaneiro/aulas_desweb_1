@@ -7,7 +7,7 @@ $sSenha = $_POST['senha'];
 
 if($sUser == 'caue' && $sSenha == 'foda123'){
     echo '<script>
-            alert("Seja bem vindo ' . $_SESSION['login'] . $sUser . '");
+            alert("Seja bem vindo ' . $_SESSION['login'] .' '.  $sUser . '");
           </script>';
 }
 else{
