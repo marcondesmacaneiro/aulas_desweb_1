@@ -38,15 +38,6 @@ services:
       - 5454:5432
     environment:
       POSTGRES_PASSWORD: postgres
-  app:
-    image: phpmyadmin/phpmyadmin:latest
-    container_name: phpmyadmin-aulasweb1
-    links:
-      - mysql
-    ports:
-      - 8091:80
-    environment:
-      - PMA_ARBITRARY=1
   phppgadmin:
     image: zhajor/docker-phppgadmin
     container_name: phppgadmin-aulasweb1
