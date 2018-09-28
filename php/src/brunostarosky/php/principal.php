@@ -6,7 +6,7 @@
 
     <nav>
         <ul>
-            <li><a href="?pagina=home">Home</a></li>
+            <li><a href="?pagina=Home">Home</a></li>
             <li><a href="?pagina=contato">Contato</a></li>
         </ul>
     </nav>
