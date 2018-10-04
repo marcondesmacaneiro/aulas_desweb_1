@@ -1,5 +1,10 @@
 Instalado o Doker no Linux
 
+Antes de iniciar
+criar uma pasta data dentro da pasta mysql e da pasta postgres
+
+
+--------------------------------------------------------------------------
 Lita de comandos
 1. cd
 2. wget -O instalador.sh http://get.docker.com
@@ -8,7 +13,6 @@ Lita de comandos
 5. sudo apt-get install docker-compose
 6. sudo usermod -aG docker unidavi (unidavi aqui significa o login do computador nos computadores da unidavi, se for fazer no seu computador altere para o nome do seu usuário no linux)
 7. Reiniciar o Computador
-
 
 --------------------------------------------------------------------------
 
