@@ -1,5 +1,5 @@
 <?php
-
+    include "conexao.php";
     $sql = 'select * from pessoa';
     $query = mysqli_query($conn, $sql);
 
