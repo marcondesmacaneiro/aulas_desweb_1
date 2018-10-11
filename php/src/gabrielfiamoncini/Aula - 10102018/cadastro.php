@@ -1,5 +1,12 @@
 <?php
-    var_dump($_POST);
+    //var_dump($_POST);
+
+    if(isset($_POST["gravar"])){
+       //echo"Gravar o Registro";
+        $nome=$_POST["primeiro_nome"];
+
+        echo $nome;
+    }
 ?>
 
 <form method="post">
