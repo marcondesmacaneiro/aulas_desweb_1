@@ -1,3 +1,4 @@
+teste
 <?php
 
 $conn = mysqli_connect('mysql', 'root', 'root', 'web1');
