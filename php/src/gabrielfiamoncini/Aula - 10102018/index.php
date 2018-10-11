@@ -5,7 +5,6 @@
 
     while ($linha = mysqli_fetch_array($query)) {
         echo  $linha['primeiro_nome'].'<br>';
-        }
-       
+        }       
 
 ?>
