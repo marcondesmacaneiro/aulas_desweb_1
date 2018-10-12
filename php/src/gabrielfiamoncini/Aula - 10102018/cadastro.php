@@ -5,9 +5,10 @@ include "conexao.php";
 if (isset($_POST["gravar"])) {
        //echo"Gravar o Registro";
     $nome = $_POST["primeiro_nome"];
+    $sobrenome = $_POST["segundo_nome"];
 
         //echo $nome;
-    $sql = "insert into pessoa (primeiro_nome,segundo_nome) values ('{$nome}')";
+    $sql = "insert into pessoa (primeiro_nome,segundo_nome) values ('{$nome}','{$sobrenome}')";
     if (mysqli_query($conn, $sql)) {
         echo "Sucesso";
     } else {
