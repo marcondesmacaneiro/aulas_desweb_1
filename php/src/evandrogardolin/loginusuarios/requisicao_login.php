@@ -11,7 +11,6 @@
 			header('Location: pagina_segura.php');
 		} else{
 			echo "login invalido";
-			echo "<a ></a>";
 		}
 	}else {
 		echo "ocorreu uma falha ao capturar os dados de login";
