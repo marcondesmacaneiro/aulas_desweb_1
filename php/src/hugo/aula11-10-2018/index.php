@@ -1,22 +1,22 @@
 <?php
-    include "conexao.php";
-
-    $query = "select * from pessoa";
-    $result = mysqli_query($conn, $query);
+       
+       include "conexao.php";
+       $query= "SELECT * FROM pessoa";
+        $result= mysqli_query($conecta, $query);
+        
 ?>
-
 <table border="1">
     <tr>
         <td>ID</td>
-        <td>Primeiro Nome</td>
-        <td>Segundo Nome</td>
+        <td>Primeiro nome</td>
+        <td>Segundo nome</td>
         <td>E-mail</td>
         <td>Cidade</td>
         <td>Estado</td>
         <td>Ações</td>
     </tr>
     <?php
-        while ($linha = mysqli_fetch_array($result)) {
+        while ($linha= mysqli_fetch_array($result)){
             ?>
                 <tr>
                     <td><?=$linha["id"]?></td>
@@ -27,7 +27,9 @@
                     <td><?=$linha["estado"]?></td>
                     <td>Ações</td>
                 </tr>
+
             <?php
+            
         }
     ?>
 </table>
