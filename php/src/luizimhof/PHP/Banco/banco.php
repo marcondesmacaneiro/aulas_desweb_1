@@ -1,21 +1,34 @@
 <?php
+    include 'conexao.php';
 
-    $conn = mysqli_connect ('mysql', 'root',  'root', 'web1');
-    if(mysqli_connect_error()){
-        echo 'erro: '.mysqli_connect_error();
-        die();
-    }
-
-
-    $query = 'SELECT * FROM pessoa';
+    $query = "select * from pessoa";
     $result = mysqli_query($conn, $query);
-
-    while($linha = mysqli_fetch_array($result)){
-        echo $linha{primeiro_nome}.' ';
-        echo $linha{segundo_nome}.'<br>';
-    }
-
-
+    
 ?>
 
-
+<table border="1">
+    <tr>
+        <td>ID</td>
+        <td>Primeiro Nome</td>
+        <td>Segundo Nome</td>
+        <td>E-mail</td>
+        <td>Cidade</td>
+        <td>Estado</td>
+        <td>Ações</td>
+    </tr>
+    <?php
+        while ($linha = mysqli_fetch_array($result)) {
+        ?>
+        <tr>
+            <td><?=$linha["id"]?></td>
+            <td><?=$linha["primeiro_nome"]?></td>
+            <td><?=$linha["segundo_nome"]?></td>
+            <td><?=$linha["email"]?></td>
+            <td><?=$linha["cidade"]?></td>
+            <td><?=$linha["estado"]?></td>
+            <td>Ações</td>
+        </tr>
+        <?php
+        }
+    ?>
+</table>
