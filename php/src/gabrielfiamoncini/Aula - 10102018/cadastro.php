@@ -7,11 +7,12 @@ if (isset($_POST["gravar"])) {
     $nome = $_POST["primeiro_nome"];
     $sobrenome = $_POST["segundo_nome"];
     $email = $_POST["email"];
+    $senha = $_POST["password"];
     $cidade = $_POST["cidade"];
     $estado = $_POST["estado"];
 
    //echo $nome;
-    $sql = "insert into pessoa (primeiro_nome,segundo_nome,email,cidade,estado) values ('{$nome}','{$sobrenome}','{$email}','{$cidade}',{$estado})";
+    $sql = "insert into pessoa (primeiro_nome,segundo_nome,email,password,cidade,estado) values ('{$nome}','{$sobrenome}','{$email}','{$senha}','$cidade','{$estado}')";
     if (mysqli_query($conn, $sql)) {
         echo "Sucesso";
     } else {
@@ -32,6 +33,10 @@ if (isset($_POST["gravar"])) {
     Email 
     <br>
     <input type="text" name="email">
+    <br>
+    Senha 
+    <br>
+    <input type="text" name="password">
     <br>
     Cidade
     <br>
