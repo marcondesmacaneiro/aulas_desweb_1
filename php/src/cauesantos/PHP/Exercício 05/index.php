@@ -20,7 +20,7 @@
     <body>
         <div>
             <form action="form.php" method="POST">
-                <label>Usuário: </label>
+                <label>Usuáriooo: </label>
                 <input type="text" name="user">
                 <label>Senha: </label>
                 <input type="password" name="senha">
