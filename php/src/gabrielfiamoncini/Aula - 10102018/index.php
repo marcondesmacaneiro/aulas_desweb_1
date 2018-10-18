@@ -11,6 +11,7 @@
         <td>Primeiro Nome</td>
         <td>Segundo Nome</td>
         <td>E-mail</td>
+        <td>Senha</td>
         <td>Cidade</td>
         <td>Estado</td>
         <td>Ações</td>
@@ -24,6 +25,7 @@
             <td><?= $linha["primeiro_nome"] ?></td>
             <td><?= $linha["segundo_nome"] ?></td>
             <td><?= $linha["email"] ?></td>
+            <td><?= $linha["password"] ?></td>
             <td><?= $linha["cidade"] ?></td>
             <td><?= $linha["estado"] ?></td>
             <td>
