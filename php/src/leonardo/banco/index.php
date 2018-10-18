@@ -1,12 +1,11 @@
 <?php
-
     include "conexao.php";
 
     $query = "select * from pessoa";
     $result = mysqli_query($conn, $query);
 ?>
 
-<table border="1" >
+<table border="1">
     <tr>
         <td>ID</td>
         <td>Primeiro Nome</td>
@@ -16,11 +15,10 @@
         <td>Estado</td>
         <td>Ações</td>
     </tr>
-
     <?php
         while ($linha = mysqli_fetch_array($result)) {
-          ?>
-              <tr>
+            ?>
+                <tr>
                     <td><?=$linha["id"]?></td>
                     <td><?=$linha["primeiro_nome"]?></td>
                     <td><?=$linha["segundo_nome"]?></td>
