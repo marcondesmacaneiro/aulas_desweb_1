@@ -25,11 +25,9 @@
                     <td><?=$linha["email"]?></td>
                     <td><?=$linha["cidade"]?></td>
                     <td><?=$linha["estado"]?></td>
-                    <td>Ações</td>
+                    <td><a href="remover_detalhes.php?id=<?=$linha["id"]?>">Excluir</a></td>
                 </tr>
             <?php
         }
     ?>
 </table>
-
-

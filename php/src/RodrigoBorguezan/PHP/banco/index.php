@@ -26,10 +26,9 @@
                     <td><?=$linha["cidade"]?></td>
                     <td><?=$linha["estado"]?></td>
                     <td>Ações</td>
+                    
                 </tr>
             <?php
         }
     ?>
 </table>
-
-
