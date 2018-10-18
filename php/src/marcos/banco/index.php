@@ -28,9 +28,14 @@ $result = mysqli_query ($conn, $query);
         <td><?=$linha["primeiro_nome"]?></td>
         <td><?=$linha["segundo_nome"]?></td>
         <td><?=$linha["email"]?></td>
-        <td><?=$linha["cidade"]?>cidade</td>
+        <td><?=$linha["cidade"]?></td>
         <td><?=$linha["estado"]?></td>
-        <td>ações</td>
+        <td>
+            <a href="remover_detalhes.php?id=<?=$linha["id"]?>">remover</a>
+            <br>
+            <a href="atualizar_forma.php?id=<?=$linha["id"]?>">remover</a>
+
+        </td>
     
     </tr>
     <?php
