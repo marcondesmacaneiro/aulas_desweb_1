@@ -3,6 +3,7 @@
     $sql = 'select * from pessoa';
     $query = mysqli_query($conn, $sql);
 ?>
+<a href="cadastro.php">Cadastrar</a>
 
 <table border="1">
     <tr>
@@ -25,7 +26,11 @@
             <td><?= $linha["email"] ?></td>
             <td><?= $linha["cidade"] ?></td>
             <td><?= $linha["estado"] ?></td>
-            <td>Ações</td>
+            <td>
+                <a href="remover.php?id=<?=$linha["id"]?>">Remover</a>
+                <br>
+                <a href="alterar.php?id=<?=$linha["id"]?>">Alterar</a>            
+            </td>
         </tr>            
     <?php
 
