@@ -7,6 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <a href="banco.php">Listar o banco</a>
+    <br>
+    <a href="cadastro.php">Cadastrar pessoa no banco</a>
 </body>
 </html>
