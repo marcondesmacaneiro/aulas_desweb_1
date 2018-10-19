@@ -45,3 +45,5 @@ Cadastro de Pessoa:
     <br>
     <input type="submit" name="gravar" value="Gravar">
 </form>
+<br>
+<a href="index.php">Voltar ao Menu Principal.</a>
