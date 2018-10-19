@@ -1,4 +1,5 @@
 <?php
+
     include "conexao.php";
     //var_dump($_POST);//olhar o que ta rolado
     if(isset($_POST["gravar"])){
@@ -13,6 +14,7 @@
     }
 
 ?>
+<a href="index.php">Voltar</a>
     <form method="POST">
         Primeiro nome:
         <br>
