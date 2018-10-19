@@ -15,7 +15,7 @@
                 <br>
                 <a href="index.php">Voltar ao Menu Principal.</a>
             <?php
-        exit();
+            exit();
         }
     }
 ?>

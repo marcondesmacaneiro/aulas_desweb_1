@@ -1,3 +1,5 @@
+<a href="index.php">Voltar</a>
+<hr>
 <?php
     //var_dump($_POST);
 include "conexao.php";
