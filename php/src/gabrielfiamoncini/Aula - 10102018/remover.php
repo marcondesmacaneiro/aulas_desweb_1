@@ -6,7 +6,7 @@
       $sql="delete from pessoa where id =".$_GET['id'];
       mysqli_query($conn,$sql);
       ?>
-        <a href="index.php"> Pessoa Removida. Quiue para voltar</a>
+         <a href="index.php"> Cadastro Removido.Clique para Voltar</a>
      <?php
      exit();
   };
