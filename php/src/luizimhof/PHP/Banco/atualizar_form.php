@@ -5,11 +5,6 @@
     include "conexao.php";
     #var_dump($_POST);
 
-    $query = "SELECT * FROM pessoa WHERE id = ".$_GET['id'];
-    $result = mysqli_query($conn, $query);
-    $linha = mysqli_fetch_array($result);
-    
-   
     if(isset($_POST['alterar'])){
         $nome = $_POST["primeiro_nome"];
         $segundonome = $_POST["segundo_nome"];
@@ -28,9 +23,13 @@
             ?>
                 <a href="banco.php">Pessoa alterada, clique para voltar</a>
             <?php
-            exit();
+            #exit();
         }
+        
     }
+    $query = "SELECT * FROM pessoa WHERE id = ".$_GET['id'];
+    $result = mysqli_query($conn, $query);
+    $linha = mysqli_fetch_array($result);
 
 ?>
 
@@ -38,23 +37,23 @@
 <form method="post">
     Primeiro nome:
     <br>
-    <input type="text" name="primeiro_nome" value="<?=$linha[primeiro_nome] ?>">
+    <input type="text" name="primeiro_nome" value="<?=$linha[primeiro_nome] ?>"placeholder = "Primeiro nome">
     <br>
     Segundo nome:
     <br>
-    <input type="text" name="segundo_nome" value="<?=$linha[segundo_nome] ?>">
+    <input type="text" name="segundo_nome" value="<?=$linha[segundo_nome] ?>" placeholder = "Segundo nome">
     <br>
     Email:
     <br>
-    <input type="text" name="email" value="<?=$linha[email] ?>">
+    <input type="text" name="email" value="<?=$linha[email] ?>" placeholder = "Email">
     <br>
     Cidade:
     <br>
-    <input type="text" name="cidade" value="<?=$linha[cidade] ?>">
+    <input type="text" name="cidade" value="<?=$linha[cidade] ?>" placeholder = "Cidade">
     <br>
     Estado:
     <br>
-    <input type="text" name="estado" value="<?=$linha[estado] ?>">
+    <input type="text" name="estado" value="<?=$linha[estado] ?>" placeholder = "Estado">
     <br>
 
     <input type="submit" name="alterar" value="Alterar">
