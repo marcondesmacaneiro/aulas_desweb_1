@@ -26,7 +26,11 @@ $result = mysqli_query($conn, $query);
             <td><?=$linha["e-mail"]?></td>
             <td><?=$linha["cidade"]?></td>
             <td><?=$linha["estado"]?></td>
-            <td><?=$linha["ações"]?></td>
+            <td>
+                <a href="remover_detalhes.php?id=<?=$linha["id"]?>">remover</a>
+                <br>                
+                <a href="remover_detalhes.php?id=<?=$linha["id"]?>">remover</a>
+            </td>
         </tr>
      
      <?php
