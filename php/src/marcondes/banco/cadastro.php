@@ -1,3 +1,6 @@
+<a href="index.php">Voltar para a listagem</a>
+<hr>
+
 <?php
     include "conexao.php";
     //var_dump($_POST);
