@@ -25,11 +25,15 @@
                     <td><?=$linha["email"]?></td>
                     <td><?=$linha["cidade"]?></td>
                     <td><?=$linha["estado"]?></td>
-                    <td>Ações</td>
+                    <td><a href="remover_detalhes.php?id=<?=$linha["id"]?>">Excluir</a>
+                    <a href="alterar_detalhes.php?id=<?=$linha["id"]?>">Alterar</a>
+                    </td>
                 </tr>
             <?php
         }
     ?>
 </table>
 
+<hr>
 
+<a href="cadastro.php">Voltar para o cadastro</a>

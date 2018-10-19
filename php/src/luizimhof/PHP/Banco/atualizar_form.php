@@ -3,19 +3,23 @@
 
 <?php
     include "conexao.php";
-    var_dump($_POST);
-    if(isset($_POST["gravar"])){
-        #echo "gravar o registro";
+    #var_dump($_POST);
+   
+    if(isset($_POST['alterar'])){
         $nome = $_POST["primeiro_nome"];
         $segundonome = $_POST["segundo_nome"];
         $email = $_POST["email"];
         $cidade = $_POST["cidade"];
         $estado = $_POST["estado"];
         //echo $nome;
-        $query = "INSERT INTO pessoa (primeiro_nome, segundo_nome, email, cidade, estado) 
-                    VALUES ('{$nome}','{$segundonome}','{$email}','{$cidade}','{$estado}')";
+        $query = "UPDATE pessoa SET 
+                    primeiro_nome = '{$nome}', segundo_nome = '{$segundonome}'
+                    , email = '{$email}', cidade = '{$cidade}', estado = '{$estado}' WHERE id = ".$_GET['id'];
+        ?><br>
+        <?php
+        #echo $query;
         if ( mysqli_query($conn, $query)){
-            echo "registro gravado com sucesso";
+            echo "registro alterado com sucesso";
         }
     }
 
@@ -44,7 +48,7 @@
     <input type="text" name="estado">
     <br>
 
-    <input type="submit" name="gravar" value="Gravar">
+    <input type="submit" name="alterar" value="Alterar">
     <br>
     
 
