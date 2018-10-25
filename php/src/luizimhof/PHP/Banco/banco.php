@@ -26,9 +26,18 @@
             <td><?=$linha["email"]?></td>
             <td><?=$linha["cidade"]?></td>
             <td><?=$linha["estado"]?></td>
-            <td>Ações</td>
+            <td>
+                <a href = "remover_detalhes.php?id=<?=$linha["id"]?>">Remover</a>
+                <br>
+                <a href = "atualizar_form.php?id=<?=$linha["id"]?>">Atualizar</a>
+
+            </td>
         </tr>
         <?php
         }
     ?>
 </table>
+<br><br><br>
+<a href="cadastro.php">Adicionar um cadastro de pessoa</a>
+<hr>
+

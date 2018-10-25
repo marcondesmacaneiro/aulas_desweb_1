@@ -1,40 +1,47 @@
 <?php
-   // var_dump($_POST);
-
-     include ('conexao.php');
- 
-
+    include "conexao.php";
     if (isset($_POST["gravar"])) {
-        echo "<script> alert('Gravado com Sucesso')</script>";
         $nome = $_POST["primeiro_nome"];
-
-        //echo $nome;
-
-        $query = "insert into pessoa (primeiro_nome) values ('{$nome}')";
-        $result = mysqli_query($conn, $query); {
-            echo "Registro Gravado com Sucesso!";
+        $sobrenome = $_POST["segundo_nome"];
+        $email = $_POST["email"];
+        $cidade = $_POST["cidade"];
+        $estado = $_POST["estado"];
+        $query = "insert into pessoa (primeiro_nome,segundo_nome,email,cidade,estado) values ('{$nome}','$sobrenome','$email','$cidade','$estado')";
+        if (mysqli_query($conn, $query)) {
+            echo "Registro gravado com sucesso!";
+            ?>
+                <br>
+                <a href="cadastro.php">Cadastrar Pessoa.</a>
+                <br>
+                <a href="index.php">Voltar ao Menu Principal.</a>
+            <?php
+        exit();
         }
-
     }
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    
-    <form method="post">
-        Primeiro Nome:
-        <br>
-        <input type="text" name="primeiro_nome">
-        <br>
-        <input type="submit" name="gravar" value="Gravar">
-    </form>
-
-</body>
-</html>
+Cadastro de Pessoa:
+<br>
+<br>
+<form method="post">
+    Primeiro Nome:
+    <br>
+    <input type="text" name="primeiro nome">
+    <br>
+    Segundo Nome:
+    <br>
+    <input type="text" name="segundo_nome">
+    <br>
+    E-mail:
+    <br>
+    <input type="text" name="email">
+    <br>
+    Cidade:
+    <br>
+    <input type="text" name="cidade">
+    <br>
+    Estado:
+    <br>
+    <input type="text" name="estado">
+    <br>
+    <input type="submit" name="gravar" value="Gravar">
+</form>
