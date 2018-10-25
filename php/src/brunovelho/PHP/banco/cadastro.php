@@ -8,7 +8,7 @@
         $estado = $_POST["estado"];
         $query = "insert into pessoa (primeiro_nome,segundo_nome,email,cidade,estado) values ('{$nome}','$sobrenome','$email','$cidade','$estado')";
         if (mysqli_query($conn, $query)) {
-            echo "Registro gravado com sucesso!";
+            echo '<script> alert("Registro gravado com sucesso!")</script>';
             ?>
                 <br>
                 <a href="cadastro.php">Cadastrar Pessoa.</a>
