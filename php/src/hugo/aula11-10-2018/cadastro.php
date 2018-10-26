@@ -20,5 +20,21 @@
         <br>
         <input type="text" name="primeiro_nome">
         <br>
+        Segundo nome:
+        <br>
+        <input type="text" name="primeiro_nome">
+        <br>
+        Primeiro nome:
+        <br>
+        <input type="text" name="primeiro_nome">
+        <br>
+        Primeiro nome:
+        <br>
+        <input type="text" name="primeiro_nome">
+        <br>
+        Primeiro nome:
+        <br>
+        <input type="text" name="primeiro_nome">
+        <br>
         <input type="submit" name="gravar" value="Gravar">
     </form>
