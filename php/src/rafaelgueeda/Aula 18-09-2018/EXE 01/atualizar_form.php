@@ -4,6 +4,8 @@
     if(isset($_POST['atualizar'])){
 
             $update = "update pessoa set primeiro_nome ='{$_POST['primeiro_nome']}' 
+                                     
+                                    
                     where id =".$_GET['id'];
             mysqli_query($conn, $update);
             }
