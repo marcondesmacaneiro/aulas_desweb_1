@@ -3,7 +3,7 @@
 
 <?php
     include "conexao.php";
-    var_dump($_POST);
+
     if(isset($_POST["gravar"])){
         #echo "gravar o registro";
         $nome = $_POST["primeiro_nome"];
