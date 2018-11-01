@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>GF Financeira</title>
 </head>
 <body>
     <form method="post" >
@@ -29,13 +29,13 @@
 
     $sql = "Select Login from Login where Login ='{$login}' and Senha='{$senha}'";
     $result =  mysqli_query($conn,$sql);
-   
+       
     if (mysqli_num_rows($result) == 1) {
+        
         echo "Bem Vindo !";
-        include "cadastro.php";
+        include "menu.php";
+
     } else {
         echo'Dados Invalidos';        
     }
-      
-
 ?>
