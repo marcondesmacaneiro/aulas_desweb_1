@@ -11,10 +11,11 @@
         $email = $_POST["email"];
         $cidade = $_POST["cidade"];
         $estado = $_POST["estado"];
+        $password = $_POST["password"];
 
-          $query = "insert into pessoa (primeiro_nome,segundo_nome,email,cidade,estado) values 
-                  ('{$Pnome}','{$Snome}','{$email}','{$cidade}','{$estado}')";
-        if (mysqli_query($conn, $query)) {
+          $query = "insert into pessoa (password,primeiro_nome,segundo_nome,email,cidade,estado) 
+          values ('{$password}','{$Pnome}','{$Snome}','{$email}','{$cidade}','{$estado}')";
+                     if (mysqli_query($conn, $query)) {
             echo "Registro gravado com sucesso!";
         }
     }
@@ -29,6 +30,9 @@
     <br>
     Email:
         <input type="text" name="email">
+    <br>
+    Password:
+        <input type="text" name="password">
     <br>
     Cidade:
         <input type="text" name="cidade">
