@@ -15,7 +15,8 @@ CREATE TABLE tbcarro(
     car_valor_diaria DECIMAL(10,2) NOT NULL,
     car_modelo VARCHAR(25) NOT NULL,
     car_ano INTEGER NOT NULL,
-    car_
+    car_qtd INTEGER NOT NULL,
+    CONSTRAINT pk_car_id PRIMARY KEY (car_id),
 
 );
 
@@ -26,7 +27,6 @@ CREATE TABLE tbaluguel(
     alu_qtd_dia INTEGER NOT NULL,
     alu_data_ini TIMESTAMP NOT NULL,
     alu_data_final TIMESTAMP NOT NULL,
-    alu_data_ano TIMESTAMP NOT NULL,
     CONSTRAINT pk_alu_id PRIMARY KEY (alu_id),
     CONSTRAINT "TBALUGUEL -> TBCLIENTE" FOREIGN KEY (cli_id)
         REFERENCES locacao.tbcliente(cli_id),
