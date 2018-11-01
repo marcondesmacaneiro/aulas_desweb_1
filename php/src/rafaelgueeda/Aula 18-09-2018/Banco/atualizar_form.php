@@ -5,11 +5,14 @@
         $update = "update pessoa 
                     set primeiro_nome = '{$_POST['primeiro_nome']}',
                         segundo_nome = '{$_POST['segundo_nome']}',
+                        idade = '{$_POST['idade']}',
                         email = '{$_POST['email']}',
+                        password ='{$_POST['password']}',
                         cidade = '{$_POST['cidade']}',
                         estado = '{$_POST['estado']}'
                     where id = {$_GET["id"]}
                     ";
+                    
         mysqli_query($conn, $update);
     }
     
@@ -23,24 +26,32 @@
 
 <form method="post">
     Primeiro Nome:
-    <input type="text" name="primeiro_nome" 
-    value="<?=$linha['primeiro_nome']?>">
+        <input type="text" name="primeiro_nome" 
+        value="<?=$linha['primeiro_nome']?>">
     </br>
     Segundo Nome:
-    <input type="text" name="segundo_nome" 
-    value="<?=$linha['segundo_nome']?>">
+        <input type="text" name="segundo_nome" 
+        value="<?=$linha['segundo_nome']?>">
     </br>
-    Email Nome:
-    <input type="text" name="email" 
-    value="<?=$linha['email']?>">
+    Idade:
+        <input type="text" name="idade" 
+        value="<?=$linha['idade']?>">
+    </br>
+    Email:
+        <input type="text" name="email" 
+        value="<?=$linha['email']?>">
      </br>
-    Cidade:
-    <input type="text" name="cidade" 
-    value="<?=$linha['cidade']?>">
+     Senha:
+        <input type="text" name="password" 
+        value="<?=$linha['password']?>">
+    </br>
+     Cidade:
+        <input type="text" name="cidade" 
+        value="<?=$linha['cidade']?>">
     </br>
     Estado:
-    <input type="text" name="estado" 
-    value="<?=$linha['estado']?>">
+        <input type="text" name="estado" 
+        value="<?=$linha['estado']?>">
 
     <br>
     <input type="submit" name="atualizar" value="atualizar">
