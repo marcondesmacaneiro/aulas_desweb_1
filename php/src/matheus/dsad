@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>HTML</title>
+		<meta name="description" content="">
+		<meta name="author" content="1012090">
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+	</head>
+
+	<body>
+		<!--Tabelas-->
+		<table border="1">
+			<tr>
+				<th>A</th>
+				<th>B</th>
+				<th>C</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>5</td>
+				<td>6</td>				
+			</tr>
+			<tr>
+				<td>7</td>
+				<td>8</td>
+				<td>9</td>
+			</tr>
+		</table>
+		
+		<hr />
+		<!--Tabela com mesclagem-->
+		
+		<table border="1">
+				<tr>
+					<td rowspan="3">1</td>
+					<td colspan="2">2</td>
+				</tr>	
+				<tr>
+
+					<td rowspan="2">5</td>
+					<td>6</td>
+				</tr>
+				<tr>
+
+					<td>9</td>
+				</tr>
+		</table>
+		<hr />
+		<table border="1">
+				<tr>
+					<td colspan="3">1</td>
+
+					<td>4</td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td colspan="2">6</td>
+
+					<td rowspan="3">8</td>					
+				</tr>
+				<tr>
+					<td colspan="2">9</td>
+
+					<td>11</td>
+				</tr>
+				<tr>
+					<td>13</td>
+					<td>14</td>
+					<td>15</td>
+				
+				</tr>
+		</table>
+	
+		<hr />
+		
+		<!--Formulários-->
+		
+		<form>
+			<fieldset>
+				<legend>Formulário de cadastro</legend>
+				<label for="GET-nome">Nome</label>
+				<input id="GET-nome" type="text" name="nome" placeholder="Digite seu nome..." required="required" maxlength="20" readonly="readonly"/>
+				<br>
+				<label for="GET-email">E-mail</label>
+				<input type="email" id="GET-email" name="email" required="required" placeholder="Digite seu e-mail..." autofocus="autofocus"/>
+				<br>
+				<input type="radio" id="GET-masc" name="sexo"/>
+				<label for="GET-masc">Masculino</label>
+				<input type="radio" id="GET-fem" name="sexo"/>
+				<label for="GET-fem">Feminino</label>
+				<br>
+				Marque seus estilos de música preferidos:
+				<br />
+				<input type="checkbox" id="GET-rock" name="musica"/>
+				<label for="GET-rock">Rock</label>
+				<input type="checkbox" id="GET-pop" name="musica"/>
+				<label for="GET-pop">Pop</label>
+				<br />
+				<label for="GET-msg">Digite sua mensagem</label>
+				<textarea id="GET-msg" name="mensagem" rows="10" cols="30" spellcheck="false"></textarea>
+				<br />
+				<label for="GET-estado">Estado:</label>
+				<select name="estado" id="GET-estado">
+					<option value="SC">Santa Catarina</option>
+					<option value="PR">Paraná</option>
+				</select>
+				<br />
+				<input type="submit" value="Salvar" name="salvar"/>
+			</fieldset>	
+		</form>	
+	</body>
+</html>
