@@ -1,0 +1,11 @@
+Elimina todos os containers em execução
+docker kill $(docker ps -q)
+
+Elimina todos os container salvos
+docker rm $(docker ps -q -a)
+
+Elimina todas as imagens salvas
+docker rmi $(docker images -q)
+
+Sobe os containers
+docker-compose up --build

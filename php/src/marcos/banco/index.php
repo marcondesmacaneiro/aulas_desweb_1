@@ -33,7 +33,7 @@ $result = mysqli_query ($conn, $query);
         <td>
             <a href="remover_detalhes.php?id=<?=$linha["id"]?>">remover</a>
             <br>
-            <a href="atualizar_forma.php?id=<?=$linha["id"]?>">remover</a>
+            <a href="atualizar_form.php?id=<?=$linha["id"]?>">atualizar</a>
 
         </td>
     

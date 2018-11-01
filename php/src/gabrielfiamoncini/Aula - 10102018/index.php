@@ -1,6 +1,7 @@
 <?php
     include "conexao.php";
     $sql = 'select * from pessoa';
+    $sql1 = 'delete from pessoa';
     $query = mysqli_query($conn, $sql);
 ?>
 <a href="cadastro.php">Cadastrar</a>
@@ -35,7 +36,19 @@
             </td>
         </tr>            
     <?php
+    
+    if(isset($_POST["excluir"])){
+        $sql1="delete from pessoa ";
+        if (mysqli_query($conn, $sql1)) {
+            echo "Sucesso";
+        } else {
+            echo "Erro";
+        }
+    } 
 
-    }
+    } 
+    
+    
     ?>
+    
 </table>
