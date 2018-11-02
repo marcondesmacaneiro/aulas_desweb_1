@@ -35,11 +35,10 @@
                     <td><?=$linha["cidade"]?></td>
                     <td><?=$linha["estado"]?></td>
                     <td>
-                        <a href="remover_detalhes.php?id=<?=$linha["id"]?>">Remover</a>
-                        <br>    
-                        <a href="atualizar_form.php?id=<?=$linha["id"]?>">Atualizar</a>    
-
-                    </td>
+                        <a href="atualizar_form.php?id=<?=$linha["id"]?>">Editar</a> 
+                        <br>   
+                        <a href="remover_detalhes.php?id=<?=$linha["id"]?>">Excluir</a>
+                  </td>
                 </tr>
             <?php
         }
@@ -58,7 +57,7 @@
             ?>
              <tr>
                 <td><?=$linha["primeiro_nome"]?></td>
-                <td><?=$linha["idade"]?></td>
+                <td><?=$linha["idade"]?> anos</td>
             </tr>
         <?php 
         }
