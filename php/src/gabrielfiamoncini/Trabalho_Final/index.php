@@ -7,6 +7,8 @@
     <title>GF Financeira</title>
 </head>
 <body>
+
+   <h3>Acessar</h3>
     <form method="post" >
     <fieldset>
     <legend>Autenticação</legend>
@@ -14,7 +16,7 @@
     <input type="text" name="login" id="login">
     <label>Senha</label>
     <input type="password" name="senha" id="senha">
-    <input type="submit" value="logar">
+    <input type="submit" name="logar" value="logar">
     </fieldset>
     </form>
 </body>
@@ -29,13 +31,16 @@
 
     $sql = "Select Login from Login where Login ='{$login}' and Senha='{$senha}'";
     $result =  mysqli_query($conn,$sql);
-       
-    if (mysqli_num_rows($result) == 1) {
-        
-        echo "Bem Vindo !";
-        include "menu.php";
-
-    } else {
-        echo'Dados Invalidos';        
-    }
+    
+    if(isset($_POST["logar"])){
+        if (mysqli_num_rows($result) == 1) {
+            echo "Bem Vindo !";
+            //header('location:menu.php');
+            include"menu.php";
+    
+        } else {
+            echo'Dados Invalidos';        
+        }
+    }   
+    
 ?>

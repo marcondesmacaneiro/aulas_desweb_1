@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Cadastro de Clientes</title>
 </head>
 <body>
-    <h1>Cadastro</h1>
+    <h3>Dados do Cliente</h3>
     <form method="post">
     Primeiro Nome:
     <br>
@@ -33,7 +33,8 @@
     <br>
     <input type="text" name="estado">
     <br>
-    <input type="submit" name="gravar" value="Gravar">    
-</form>
+    <input type="submit" name="gravar" value="Gravar">  
+    <br>
+    <a href="menu.php">Voltar</a>
 </body>
 </html>
