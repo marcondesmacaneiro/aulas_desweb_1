@@ -34,9 +34,9 @@
     
     if(isset($_POST["logar"])){
         if (mysqli_num_rows($result) == 1) {
-        
             echo "Bem Vindo !";
-            include "menu.php";
+            //header('location:menu.php');
+            include"menu.php";
     
         } else {
             echo'Dados Invalidos';        
