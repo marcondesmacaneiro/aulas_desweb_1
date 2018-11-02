@@ -7,7 +7,7 @@ $result = mysqli_query($conn, $query);
 
 ?>
 
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -20,6 +20,7 @@ $result = mysqli_query($conn, $query);
 <body>
     
 
+<a href="cadastro.php">Cadastro</a>
 <table border="1">
     <tr>
         <td>ID</td>
@@ -40,7 +41,10 @@ $result = mysqli_query($conn, $query);
                     <td><?=$linha["email"]?></td>
                     <td><?=$linha["cidade"]?></td>
                     <td><?=$linha["estado"]?></td>
-                    <td>Açoes</td>
+                    <td>
+                        <a href="remover_detalhes.php?id=<?=$linha["id"]?>">Remover</a>
+                        <br>
+                        <a href="atualizar_form.php?id=<?=$linha["id"]?>">Atualizar</a>
                 </tr>
             <?php
         }
