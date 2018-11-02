@@ -8,6 +8,12 @@
 </head>
 <body>
     <h1>Menu</h1>
-    <a href="cadastro.php">Cadastrar</a>
+    <a href="cad_pes.php">Cadastrar Clientes</a>
+    <br>
+    <a href="cad_parc.php">Cadastrar Parcelas</a>
+    <br>
+    <a href="list_parc.php">Listar Parcelas</a>
+    <br>
+    <a href="index.php">Sair</a>
 </body>
 </html>
