@@ -2,7 +2,7 @@
     include "conexao.php";
 
     $query = "select * from pessoa";
-    $trinta = "select * from pessoa where idade <=30 order by primeiro_nome";
+    $trinta = "select * from pessoa where idade <=30 order by idade";
     $result = mysqli_query($conn, $query);
     $resulttrinta = mysqli_query($conn, $trinta);
     

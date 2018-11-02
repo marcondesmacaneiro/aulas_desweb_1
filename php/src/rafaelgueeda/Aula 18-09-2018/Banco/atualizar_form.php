@@ -21,7 +21,7 @@
     $linha = mysqli_fetch_array($resultado);
 ?>
 
-<a href="index.php">Voltar para a Listagem</a>
+<a href="index.php">Tela Inicial</a>
 <hr>
 
 <form method="post">
