@@ -1,5 +1,5 @@
 <?php
-    include "conexao.php";
+include "conexao.php";
     //var_dump($_post);
     if (isset($_POST["gravar"]))    {
        // echo "gravar o registro";

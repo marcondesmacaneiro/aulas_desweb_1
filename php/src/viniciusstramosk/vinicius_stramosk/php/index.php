@@ -5,5 +5,9 @@
 
     include "rodape.php";
 
-    include "contato.php"
+    include "contato.php";
+
+    include "script.php";
+
+    include "script2.php";
 ?>

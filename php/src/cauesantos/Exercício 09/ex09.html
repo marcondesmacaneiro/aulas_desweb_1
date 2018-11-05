@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Atividade</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+             section{
+                border: 1px solid #000;
+                height: 100px;
+                margin: 40px auto;
+                width: 400px;
+            }
+            h1{
+                font-size: 1.2em;
+                text-align: center;
+                background-color: #990000;
+                color: #FFF;
+                left: -10px;
+                padding: 5px 0;
+                position: relative;
+                width: 420px;
+            }
+            h1::before{
+                border: 5px solid #7C0000;
+                content: '';
+                left: 0;
+                position: absolute;
+                top: -10px;
+            }
+        </style>
+    </head>
+    <body>
+        <section>
+            <h1>Um exemplo de pseudoelementos</h1>
+        </section>
+    </body>
+</html>

@@ -25,17 +25,22 @@
     Primeiro Nome:
     <input type="text" name="primeiro_nome" value="<?=$linha['primeiro_nome'];?>">
     <br>
+    <br>
     Segundo Nome:
     <input type="text" name="segundo_nome" value="<?=$linha['segundo_nome'];?>">
+    <br>
     <br>
     E-mail:
     <input type="text" name="email" value="<?=$linha['email'];?>">
     <br>
+    <br>
     Cidade:
     <input type="text" name="cidade" value="<?=$linha['cidade'];?>">
     <br>
+    <br>
     UF:
     <input type="text" name="estado" value="<?=$linha['estado'];?>">
+    <br>
     <br>
     <input type="submit" name="atualizar" value="Atualizar"> 
 
