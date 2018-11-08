@@ -1,4 +1,14 @@
 <?php
+      session_start();
+    
+      if((!isset ($_SESSION['Login']) == true) and (!isset ($_SESSION['Senha']) == true))
+  {
+    unset($_SESSION['Login']);
+    unset($_SESSION['Senha']);
+    header('location:faz_login.php');
+    }
+   
+  $logado = $_SESSION['Login'];
     include "conexao.php";
     if(isset($_POST['atualizar'])){
         $update = "update pessoas set 

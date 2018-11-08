@@ -29,6 +29,6 @@ $logado = $_SESSION['Login'];
     <br>
     <a href="list_parc.php">Listar Parcelas</a>
     <br>
-    <a href="index.php">Sair</a>
+    <a href="logout.php">Sair</a>
 </body>
 </html>
