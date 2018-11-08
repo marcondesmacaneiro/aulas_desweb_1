@@ -43,7 +43,8 @@
     <br>    
     <input type="submit" name="gravar" value="Gravar">  
     <br>
-    <a href="menu.php">Voltar</a>
+    <a href="index.php">Voltar</a>
+   </form> 
 </body>
 </html>
 <?php

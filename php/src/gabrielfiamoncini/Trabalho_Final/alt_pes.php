@@ -36,7 +36,7 @@
     }
 ?>
 
-<a href="menu.php">Voltar</a>
+<a href="index.php">Voltar</a>
 <hr>
 
 <form method ="post">

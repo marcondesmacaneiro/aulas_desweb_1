@@ -11,8 +11,8 @@
     
     if(isset($_POST["logar"])){
         if (mysqli_num_rows($result) == 1) {
-            echo "Bem Vindo !";
-            $_SESSION['Login'] = $login;
+          
+           $_SESSION['Login'] = $login;
            $_SESSION['Senha'] = $senha;
             header('location:index.php');
             

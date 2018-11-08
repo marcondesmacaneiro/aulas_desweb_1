@@ -21,7 +21,7 @@ $logado = $_SESSION['Login'];
 </head>
 <body>
     <h1>Cadastro</h1>
-    <a href="menu.php">Voltar</a>
+    <a href="index.php">Voltar</a>
     <form method="post">
     Primeiro Nome:
     <br>

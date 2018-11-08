@@ -17,6 +17,7 @@
     <label>Senha</label>
     <input type="password" name="senha" id="senha">
     <input type="submit" name="logar" value="logar">
+    <a href="cad_usu.php">Cadastrar</a>
     </fieldset>
     </form>
 </body>

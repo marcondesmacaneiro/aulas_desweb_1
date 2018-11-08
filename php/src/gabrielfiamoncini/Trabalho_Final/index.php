@@ -17,7 +17,7 @@ $logado = $_SESSION['Login'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Menu</title>
 </head>
 <body>
     <h1>Menu</h1>
@@ -28,6 +28,8 @@ $logado = $_SESSION['Login'];
     <a href="cad_parc.php">Cadastrar Parcelas</a>
     <br>
     <a href="list_parc.php">Listar Parcelas</a>
+    <br>
+    <a href="list_usu.php">Cadastro de Usuários</a>
     <br>
     <a href="logout.php">Sair</a>
 </body>
