@@ -1,6 +1,14 @@
 <?php
 session_start();
-if(isset($_SESSION['login'])) {
+include "conexao.php";
+
+$login = $_POST['login'];
+$senha = $_POST['senha'];
+
+$result = mysqli_query("SELECT * FROM `USUARIO` 
+    WHERE `login` = '$login' AND `senha`= '$senha'");
+
+if(isset($result)) {
     if (isset($_GET['logout'])) {
         session_destroy();
         header('Location: index.php');
