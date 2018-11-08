@@ -1,7 +1,6 @@
 <?php
     $diretorioSite = $_SERVER['DOCUMENT_ROOT'].'/marcondes/aulas_desweb_1/php/src/luizmoratelli';
     $paginaIncluir = 'Home';
-    include($diretorioSite.'/Cabecalho.php');
 
     if (isset($_GET['url'])) {
         $paginaIncluir = ucfirst($_GET['url']);
@@ -11,6 +10,8 @@
         } 
     }
 
-    include($diretorioSite.'/paginas/'.$paginaIncluir.'.php');
+    require_once($diretorioSite.'/Cabecalho.php');
 
-    include($diretorioSite.'/Rodape.php');
+    require_once($diretorioSite.'/paginas/'.$paginaIncluir.'.php');
+
+    require_once($diretorioSite.'/Rodape.php');
