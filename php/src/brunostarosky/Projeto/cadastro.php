@@ -14,13 +14,14 @@
         $cidade = $_POST["cidade"];
         $estado = $_POST["estado"];
 
-          $query = "insert into usuario (email,nome,senha,jogo,cidade,estado) 
+          $query = "insert into pessoa (email,nome,senha,jogo,cidade,estado) 
           values ('{$email}','{$nome}','{$senha}','{$jogo}','{$cidade}','{$estado}')";
                      if (mysqli_query($conn, $query)) {
-            echo "Registro gravado com sucesso!";
-        }
-    }
+                        echo "Registro gravado com sucesso!"; 
+                }
+            }
 ?>
+            
 
 <p>Complete os campos a seguir para se cadastras e começar a comprar!</p>
 
@@ -51,3 +52,6 @@
     <br />
     <input type="submit" name="gravar" value="Gravar">
 </form>
+
+<a href="mypage.php">Aṕos o cadastro clique aqui para ir para sua pagina e comprar!</a>
+

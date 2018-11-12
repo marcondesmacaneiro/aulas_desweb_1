@@ -1,46 +1,36 @@
+<?php
+    session_start();
+    
+    if((!isset ($_SESSION['Login']) == true) and (!isset ($_SESSION['Senha']) == true))
+{
+  unset($_SESSION['Login']);
+  unset($_SESSION['Senha']);
+  header('location:faz_login.php');
+  }
+ 
+$logado = $_SESSION['Login'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>GF Financeira</title>
+    <title>Menu</title>
 </head>
 <body>
-
-   <h3>Acessar</h3>
-    <form method="post" >
-    <fieldset>
-    <legend>Autenticação</legend>
-    <label >Usuário</label>
-    <input type="text" name="login" id="login">
-    <label>Senha</label>
-    <input type="password" name="senha" id="senha">
-    <input type="submit" name="logar" value="logar">
-    </fieldset>
-    </form>
+    <h1>Menu</h1>
+    <a href="cad_pes.php">Cadastrar Clientes</a>
+    <br>
+    <a href="lis_pes.php">Listar Clientes</a>
+    <br>   
+    <a href="cad_parc.php">Cadastrar Parcelas</a>
+    <br>
+    <a href="list_parc.php">Listar Parcelas</a>
+    <br>
+    <a href="list_usu.php">Cadastro de Usuários</a>
+    <br>
+    <a href="logout.php">Sair</a>
 </body>
 </html>
-
-
-<?php
-    include "conexao.php";
-    
-    $login = $_POST['login'];
-    $senha = $_POST['senha'];
-
-    $sql = "Select Login from Login where Login ='{$login}' and Senha='{$senha}'";
-    $result =  mysqli_query($conn,$sql);
-    
-    if(isset($_POST["logar"])){
-        if (mysqli_num_rows($result) == 1) {
-            echo "Bem Vindo !";
-            //header('location:menu.php');
-            include"menu.php";
-    
-        } else {
-            echo'Dados Invalidos';        
-        }
-    }   
-    
-?>
