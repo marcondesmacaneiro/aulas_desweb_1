@@ -18,7 +18,7 @@
 
 
         $query = "insert into pessoa (primeiro_nome,sobrenome,documento,telefone,email,logradouro,complemento,cidade,uf)
-        values ('{$pnome}','{$snome}','{$documento}','{$telefone}','{$email}','{$logradouro}','{$complemento'},'$cidade','$uf')";
+        values ('{$pnome}','{$snome}','{$documento}','{$telefone}','{$email}','{$logradouro}','{$complemento}','{$cidade}','{$uf}')";
             
         if (mysqli_query($conn, $query)) {
             echo "Cliente Cadastrado com sucesso!";
