@@ -1,3 +1,16 @@
+<?php
+    session_start();
+    
+    if((!isset ($_SESSION['Login']) == true) and (!isset ($_SESSION['Senha']) == true))
+{
+  unset($_SESSION['Login']);
+  unset($_SESSION['Senha']);
+  header('location:faz_login.php');
+  }
+ 
+$logado = $_SESSION['Login'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +21,7 @@
 </head>
 <body>
     <h1>Cadastro</h1>
-    <a href="menu.php">Voltar</a>
+    <a href="index.php">Voltar</a>
     <form method="post">
     Primeiro Nome:
     <br>
