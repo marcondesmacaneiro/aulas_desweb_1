@@ -1,0 +1,116 @@
+#loginCampo{
+margin-top: 100px;
+margin-left: 35%;
+width: 290px;
+height: 315px;
+background-color: #c1c1c1;
+border: 1px solid #9e9e9ec7;
+border-radius: 6px;
+}
+#loginCampo:hover{
+background-color: #9e9e9ec7;  
+}
+#login{
+text-align: center;
+font-size: 27px;
+font-family: sans-serif,serif;
+}
+.entrar{
+font-family: sans-serif,serif;
+font-size: 20px;
+margin-left:7px
+}
+input[type=text] {
+width: 70%;
+padding: 10px 10px;
+margin: 8px 0;
+display: inline-block;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+margin-top:45px;
+}
+input[type=password] {
+width: 70%;
+padding: 10px 10px;
+margin: 8px 0;
+display: inline-block;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+margin-left: 12px;
+margin-top:60px;
+}
+#loginCampo{
+    margin-top: 100px;
+    margin-left: 40%;
+    width: 290px;
+    height: 315px;
+    background-color: #f7f7f7;
+    border: 1px solid #9e9e9ec7;
+    border-radius: 6px;
+}
+#loginCampo:hover{
+    background-color: #9e9e9e33;  
+}
+#login{
+    text-align: center;
+    font-size: 27px;
+    font-family: sans-serif,serif;
+}
+.entrar{
+    font-family: sans-serif,serif;
+    font-size: 20px;
+    margin-left:7px
+}
+input[type=text] {
+    width: 70%;
+    padding: 10px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top:45px;
+    margin-left:13px;
+}
+input[type=password] {
+    width: 70%;
+    padding: 10px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-left: 12px;
+    margin-top:60px;
+}
+#submeter {
+    width: 50%;
+    background-color: #1f9623;
+    color: white;
+    padding: 12px 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin:0 auto;
+    margin-top: 25px
+}
+
+#submeter:hover {
+    background-color: #33bd38;
+}
+body{
+    background-color: #f2f2f2ad ;
+}
+#erro{
+    font-style: italic;
+    font-family: sans-serif;
+    color:red;
+}
+span{
+    color: green;
+    margin-left: 40%;
+}
