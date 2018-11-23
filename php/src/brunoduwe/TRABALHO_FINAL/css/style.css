@@ -1,0 +1,183 @@
+@media only screen and (max-device-width: 767px) {
+    .index {
+        width: 500px;
+        height: 400px;
+    }
+    .cliente {
+        width: 200px;
+        height: 40px;
+    }
+    .menu {
+        height: 100px;
+    }
+    #menu {
+        white-space: pre-line;
+    }
+    .conteudo {
+        padding-top: 150px;
+    }
+    .btn-primary-outline {
+        background-color: transparent;
+        border-color: transparent;
+        box-shadow: none;
+        color: lightgray;
+        text-decoration: none;
+    }
+    .btn-primary-outline:hover {
+        background-color: rgba(88, 85, 85, 0.719);
+        border-color: rgb(34, 34, 34);
+        box-shadow: none;
+        color: lightcyan;
+        text-decoration: none;
+    }
+    .btn-primary-outline-active {
+        background-color: rgba(88, 85, 85, 0.719);
+        border-color: rgb(34, 34, 34);
+        box-shadow: none;
+        color: lightcyan;
+        text-decoration: none;
+    }
+    .btn-primary-outline-active:hover {
+        background-color: rgba(88, 85, 85, 0.719);
+        border-color: rgb(34, 34, 34);
+        box-shadow: none;
+        color: lightcyan;
+        text-decoration: none;
+    }
+    .caixa {
+        width: 300px;
+        height: 225px;
+    }
+    .clearleft {
+        clear: left;
+    }
+    .clearright {
+        clear: right;
+    }
+    .pessoa:hover {
+        color:#fff;
+        background-color: transparent;
+        border-color:#545b62;
+    }
+}
+@media only screen and (max-device-width: 1321px) and (min-device-width: 768px) {
+    .index {
+        width: 500px;
+        height: 400px;
+    }
+    .cliente {
+        width: 200px;
+        height: 40px;
+    }
+    .menu {
+        height: auto;
+    }   
+    #menu {
+        white-space: pre-line;
+    }
+    .conteudo {
+        padding-top: 150px;
+    }
+    .btn-primary-outline {
+        background-color: transparent;
+        border-color: transparent;
+        box-shadow: none;
+        color: lightgray;
+        text-decoration: none;
+    }
+    .btn-primary-outline:hover {
+        background-color: rgba(88, 85, 85, 0.719);
+        border-color: rgb(34, 34, 34);
+        box-shadow: none;
+        color: lightcyan;
+        text-decoration: none;
+    }
+    .btn-primary-outline-active {
+        background-color: rgba(88, 85, 85, 0.719);
+        border-color: rgb(34, 34, 34);
+        box-shadow: none;
+        color: lightcyan;
+        text-decoration: none;
+    }
+    .btn-primary-outline-active:hover {
+        background-color: rgba(88, 85, 85, 0.719);
+        border-color: rgb(34, 34, 34);
+        box-shadow: none;
+        color: lightcyan;
+        text-decoration: none;
+    }
+    .caixa {
+        width: 300px;
+        height: 225px;
+    }
+    .clearleft {
+        clear: left;
+    }
+    .clearright {
+        clear: right;
+    }
+    .pessoa:hover {
+        color:#fff;
+        background-color: transparent;
+        border-color:#545b62;
+    }
+}
+@media only screen and (min-device-width: 1322px) {
+    .index {
+        width: 500px;
+        height: 400px;
+    }
+    .cliente {
+        width: 200px;
+        height: 40px;
+    }
+    .menu {
+        height: 50px;
+    }
+    .conteudo {
+        padding-top: 80px;
+    }
+    .btn-primary-outline {
+        background-color: transparent;
+        border-color: transparent;
+        box-shadow: none;
+        color: lightgray;
+        text-decoration: none;
+    }
+    .btn-primary-outline:hover {
+        background-color: rgba(88, 85, 85, 0.719);
+        border-color: rgb(34, 34, 34);
+        box-shadow: none;
+        color: lightcyan;
+        text-decoration: none;
+    }
+    .btn-primary-outline-active {
+        background-color: rgba(88, 85, 85, 0.719);
+        border-color: rgb(34, 34, 34);
+        box-shadow: none;
+        color: lightcyan;
+        text-decoration: none;
+    }
+    .btn-primary-outline-active:hover {
+        background-color: rgba(88, 85, 85, 0.719);
+        border-color: rgb(34, 34, 34);
+        box-shadow: none;
+        color: lightcyan;
+        text-decoration: none;
+    }
+    .caixa {
+        width: 300px;
+        height: 225px;
+    }
+    .clearleft {
+        clear: left;
+    }
+    .clearright {
+        clear: right;
+    }
+    .pessoa:hover {
+        color:#fff;
+        background-color: transparent;
+        border-color:#545b62;
+    }
+}
