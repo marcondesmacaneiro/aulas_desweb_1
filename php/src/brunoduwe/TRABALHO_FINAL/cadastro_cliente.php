@@ -56,7 +56,7 @@ if(isset($login_cookie)) {
             </nav>
             <div class="conteudo">
                 <h2 class="text-uppercase">
-                    Cadastro de Pessoas:    
+                    Cadastro de Cliente:    
                 </h2>
                 <hr/>
                 <p class="font-weight-bold">
@@ -98,9 +98,10 @@ if(isset($login_cookie)) {
                     <label for="complemento">Complemento:</label>
                     <input type="text" name="complemento" placeholder="Informe o Complemento" class="text-center form-control" required="required">
                     <br>
-                    <br>
-                    <input type="reset" class="btn btn-primary btn-sm" value="Limpar">
+                    <input type="reset" class="btn btn-danger btn-sm" value="Limpar">
                     <input type="submit" name="gravar" value="Gravar" class="btn btn-primary btn-sm">
+                    <br>
+                    <br>
                 </form>
             </div>
     </body>

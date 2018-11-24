@@ -59,6 +59,10 @@
         background-color: transparent;
         border-color:#545b62;
     }
+    select {
+        text-align: center;
+        text-align-last: center;
+    }
 }
 @media only screen and (max-device-width: 1321px) and (min-device-width: 768px) {
     .index {
@@ -121,6 +125,10 @@
         background-color: transparent;
         border-color:#545b62;
     }
+    select {
+        text-align: center;
+        text-align-last: center;
+    }
 }
 @media only screen and (min-device-width: 1322px) {
     .index {
@@ -179,5 +187,9 @@
         color:#fff;
         background-color: transparent;
         border-color:#545b62;
+    }
+    select {
+        text-align: center;
+        text-align-last: center;
     }
 }

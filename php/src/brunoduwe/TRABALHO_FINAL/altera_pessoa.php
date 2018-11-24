@@ -41,7 +41,7 @@ if(isset($login_cookie)) {
             </nav>
             <div class="conteudo">
                 <h2 class="text-uppercase">
-                    Cadastro de Pessoas:    
+                    Alterar Cadastro de Pessoas:    
                 </h2>
                 <hr/>
                 <p class="font-weight-bold">
@@ -51,6 +51,19 @@ if(isset($login_cookie)) {
                     <a href="altera_usuario.php" class="btn btn-secondary btn-sm" id="usuario">Usuário</a>
                     <a href="altera_cliente.php" class="btn btn-secondary btn-sm" id="cliente">Cliente</a>   
                 </div>
+                <div class="container conteudo">
+                    <h5>Alterar o Cadastro de Pessoas:</h5>
+                    <p class="text-primary alert alert-primary">
+                    É possivel alterar informações do cadastro de usuário a qualquer momento, selecionando o 
+                    usuário desejado e alterando suas informações.
+                    </p>
+                    <h5>Alterar o Cadastro de Clientes:</h5>
+                    <p class="text-primary alert alert-primary">
+                    É possivel alterar informações do cadastro de cliente a qualquer momento, selecionando o 
+                    cliente desejado e alterando suas informações.
+                    </p>
+                </div>
+                <hr>
             </div>
     </body>
 </html>
