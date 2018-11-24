@@ -1,0 +1,37 @@
+#conteudo-login {
+    position: relative;
+    top: 50px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    box-shadow: 5px 5px 25px 3px rgba(0,0,0,.1);
+}
+#titulo-login {
+    text-align: center;
+    color: #b56435;
+    font-weight: bold;
+    font-size: 24px;
+}
+#form-login input{
+    height: 45px;
+    border: 1px solid #e2e2e2;
+    border-radius: 4px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,.1);
+    padding: 0 20px;
+    width: 100%;
+    margin-bottom: 10px;
+    box-sizing: border-box; 
+}
+
+#form-login button {
+    border: 1px solid #e2e2e2;
+    border-radius: 4px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,.1);
+    height: 45px;
+    padding: 0 20px;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: #b56435;
+    color: white;
+}
