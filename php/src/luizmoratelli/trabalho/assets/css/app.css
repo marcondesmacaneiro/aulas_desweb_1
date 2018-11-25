@@ -35,3 +35,13 @@
     background-color: #b56435;
     color: white;
 }
+div.error {
+    width: 100%;
+    background-color: #ffa3a3;
+    text-align: center;
+}
+div.success {
+    width: 100%;
+    background-color: #a3ffaf;
+    text-align: center;
+}
