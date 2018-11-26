@@ -45,7 +45,8 @@ if(isset($login_cookie)) {
                     Seja bem vindo, <?=$nome_cookie?>
                 </h2>
                 <img src="img/principal.png" class="float-right"/>
-                <p class="text-primary alert alert-primary clearright">O sistema de Estoque é um sistema onde voce controla a entrada e saida de produtos de seu estoque, 
+                <p class="text-primary alert alert-primary clearright">
+                O sistema de Estoque é um sistema onde voce controla a entrada e saida de produtos de seu estoque, 
                 visando aumentar o controle sobre seu patrimonio. Neste sistema voce pode cadastrar novos clientes e usuários do sistema, 
                 cadastrar produtos, categorias, consultar os produtos em estoque e movimentar o estoque.
                 </p>

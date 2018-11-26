@@ -5,10 +5,15 @@
         mysqli_query($conn, $update);
         echo "<script language='javascript' type='text/javascript'>alert('Registro Alterado com Sucesso!');window.location.href='altera_cliente.php';</script>";
     }
-    if (isset($_POST['atualizar']) and empty($_POST['option'])) {
-        echo "<script language='javascript' type='text/javascript'>alert('Selecione um Cliente Valido!');window.location.href='altera_cliente.php';</script>";
+    if (isset($_POST['removers'])) {
+        $delete = "delete from CLIENTE where CLIENTEID = '{$_POST['clienteid']}'";
+        mysqli_query($conn, $delete);
+        echo "<script language='javascript' type='text/javascript'>alert('Registro Removido com Sucesso!');window.location.href='altera_cliente.php';</script>";
     }
-    if (isset($_POST['atualizar'])) {
+    if (isset($_POST['atualizar']) and empty($_POST['option']) or isset($_POST['remover']) and empty($_POST['option'])) {
+        echo "<script language='javascript' type='text/javascript'>alert('Selecione um Usuario Valido!');window.location.href='altera_cliente.php';</script>";
+    }
+    if (isset($_POST['atualizar']) or isset($_POST['remover'])) {
         $queryesp = "select * from CLIENTE where CLIENTEID = '{$_POST['option']}'";
         $resultesp = mysqli_query($conn, $queryesp);
         $linhaesp = mysqli_fetch_array($resultesp);
@@ -71,7 +76,7 @@ if(isset($login_cookie)) {
                 </div>
                 <div class="container text-center index">
                     <?php
-                        if (empty($_POST['atualizar'])) {
+                        if (empty($_POST['atualizar']) and empty($_POST['remover'])) {
                     ?>
                         <form method="post" name="atualizar">
                             <select class="form-control" name="option">
@@ -85,7 +90,22 @@ if(isset($login_cookie)) {
                                 ?>
                             </select>
                             <br>
+                            <input type="submit" name="remover" value="Remover" class="btn btn-danger btn-sm">
                             <input type="submit" name="atualizar" value="Atualizar" class="btn btn-primary btn-sm">
+                        </form>
+                    <?php
+                        }
+                    ?>
+                    <?php
+                        if (isset($_POST['remover'])) {
+                    ?>
+                        <p class="text-danger alert alert-danger">
+                            Voce Tem Certeza Que Deseja Remover o Cliente? <br> <?=$linhaesp['NOME']?>
+                        </p>
+                        <form method="post" name="remover">
+                            <input type="hidden" name="clienteid" value="<?=$linhaesp['CLIENTEID']?>">
+                            <input type="submit" name="removers" value="Sim" class="btn btn-danger btn-sm">
+                            <a href="altera_cliente.php" class="btn btn-secondary btn-sm">Não</a>
                         </form>
                     <?php
                         }
