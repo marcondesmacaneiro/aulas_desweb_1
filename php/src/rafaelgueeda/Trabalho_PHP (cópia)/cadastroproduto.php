@@ -1,6 +1,4 @@
 <a href="index.php">Tela Inicial</a>
-<br>
-<a href="listagemprodutos.php">Listagem de Produtos</a>
 <hr>
 <?php
     include "conexao.php";
@@ -29,16 +27,7 @@
     <br>
     caracteristica:  <input type="text" name="caracteristica">
     <br>
-    Unidade de Venda:  
-        <input type="radio" name="und_v"
-        <?php if (isset($und_v) && $und_v=="UND") echo "checked";?>
-        value="UND">UND
-        <input type="radio" name="und_v"
-        <?php if (isset($und_v) && $und_v=="HORA") echo "checked";?>
-        value="HORA">HORA
-        <input type="radio" name="und_v"
-        <?php if (isset($und_v) && $geund_vnder=="KIT") echo "checked";?>
-        value="KIT">KIT
+    Unidade de Venda:   <input type="text" name="und_v">
     <br>
     Barras:   <input type="text" name="barras">
     <br>
