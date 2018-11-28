@@ -41,31 +41,34 @@ $sql = "
 
 $retorno = executarComandoBanco($conn, $sql);
 ?>
-<?=$mensagem?>
-<table border="1">
-    <tr>
-        <th>ID</th>
-        <th>Data de Reserva</th>
-        <th>N. Apartamento</th>
-        <th>Documento - Nome do Hóspede</th>
-        <th>Ações</th>
-    </tr>
-<?php
-while ($linha = pg_fetch_array($retorno)):
-    $linha['data_aluguel'] = new DateTime($linha['data_aluguel']);
-    $linha['data_aluguel'] = $linha['data_aluguel']->format('d/m/Y');
-?>
-    <tr>
-        <td><?=$linha['res_id']?></td>
-        <td><?=$linha['data_aluguel']?></td>
-        <td><?=$linha['numero_quarto']?></td>        
-        <td><?=$linha['documento']?> - <?=$linha['nome']?></td>
-        <td>
-            <a href="?url=listagemReserva&acao=excluir&id=<?=$linha['res_id']?>">Excluir</a>
-            <a href="?url=cadastroReserva&id=<?=$linha['res_id']?>">Atualizar</a>
-        </td>
-    </tr>
-<?php
-endwhile;
-?>
-</table>
+<main>
+    <h1>Listagems de Reservas</h1>
+    <?=$mensagem?>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Data de Reserva</th>
+            <th>N. Apartamento</th>
+            <th>Documento - Nome do Hóspede</th>
+            <th>Ações</th>
+        </tr>
+    <?php
+    while ($linha = pg_fetch_array($retorno)):
+        $linha['data_aluguel'] = new DateTime($linha['data_aluguel']);
+        $linha['data_aluguel'] = $linha['data_aluguel']->format('d/m/Y');
+    ?>
+        <tr>
+            <td><?=$linha['res_id']?></td>
+            <td><?=$linha['data_aluguel']?></td>
+            <td><?=$linha['numero_quarto']?></td>        
+            <td><?=$linha['documento']?> - <?=$linha['nome']?></td>
+            <td>
+                <a href="?url=listagemReserva&acao=excluir&id=<?=$linha['res_id']?>">Excluir</a>
+                <a href="?url=cadastroReserva&id=<?=$linha['res_id']?>">Atualizar</a>
+            </td>
+        </tr>
+    <?php
+    endwhile;
+    ?>
+    </table>
+</main>

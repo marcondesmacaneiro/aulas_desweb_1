@@ -92,43 +92,65 @@ if (isset($_GET['id'])){
     $linha['data_aluguel'] = new DateTime($linha['data_aluguel']);
     $linha['data_aluguel'] = $linha['data_aluguel']->format('Y-m-d');
 }
-
 ?>
-<form method="POST">
-    <?=$mensagem?>
-    <input type="hidden" id="id" name="id" value="<?=((isset($_GET['id'])) ? $_GET['id'] : '0')?>">
-    <label for="hos-id">Documento - Nome do Hóspede:</label>
-    <select name="hos-id" id="hos-id">
-    <?php
-        $sql = "
-            SELECT id, nome, documento
-              FROM hospede";
-            
-        $retorno = executarComandoBanco($conn, $sql);
-        while($linhaSelect = pg_fetch_array($retorno)):
-        ?>
-            <option value="<?=$linhaSelect['id']?>" <?=(($linhaSelect['id'] == $linha['hos_id']) ? 'selected' : '')?>><?=$linhaSelect['documento']?> - <?=$linhaSelect['nome']?></option>
-        <?php
-        endwhile;
-    ?>
-    </select><br>
-    <label for="apt-id">Número do Quarto:</label>
-    <select name="apt-id" id="apt-id">
-    <?php
-        $sql = "
-            SELECT id, numero_quarto
-              FROM apartamento";
-            
-        $retorno = executarComandoBanco($conn, $sql);
-        while($linhaSelect = pg_fetch_array($retorno)):
-        ?>
-            <option value="<?=$linhaSelect['id']?>" <?=(($linhaSelect['id'] == $linha['apt_id']) ? 'selected' : '')?>><?=$linhaSelect['numero_quarto']?></option>
-        <?php
-        endwhile;
-    ?>
-    </select><br>
-    <label for="data-aluguel">Data de Início:</label>
-    <input type="date" id="data-aluguel" name="data-aluguel" value="<?=((isset($linha['data_aluguel'])) ? $linha['data_aluguel'] : '')?>"><br/>
-
-    <input type="submit" name="acao" value="<?=((isset($_GET['id'])) ? 'atualizar' : 'gravar')?>">
-</form>
+<main>
+    <form method="POST">
+        <h1>Cadastro de Reserva</h1>
+        <?=$mensagem?>
+        <input type="hidden" id="id" name="id" value="<?=((isset($_GET['id'])) ? $_GET['id'] : '0')?>">
+        <div class="row">
+            <div class="col-25">
+                <label for="hos-id">Documento - Nome do Hóspede:</label>
+            </div>
+            <div class="col-75">
+                <select name="hos-id" id="hos-id">
+                <?php
+                    $sql = "
+                        SELECT id, nome, documento
+                        FROM hospede";
+                        
+                    $retorno = executarComandoBanco($conn, $sql);
+                    while($linhaSelect = pg_fetch_array($retorno)):
+                    ?>
+                        <option value="<?=$linhaSelect['id']?>" <?=(($linhaSelect['id'] == $linha['hos_id']) ? 'selected' : '')?>><?=$linhaSelect['documento']?> - <?=$linhaSelect['nome']?></option>
+                    <?php
+                    endwhile;
+                ?>
+                </select><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="apt-id">Número do Quarto:</label>
+            </div>
+            <div class="col-75">
+                <select name="apt-id" id="apt-id">
+                <?php
+                    $sql = "
+                        SELECT id, numero_quarto
+                        FROM apartamento";
+                        
+                    $retorno = executarComandoBanco($conn, $sql);
+                    while($linhaSelect = pg_fetch_array($retorno)):
+                    ?>
+                        <option value="<?=$linhaSelect['id']?>" <?=(($linhaSelect['id'] == $linha['apt_id']) ? 'selected' : '')?>><?=$linhaSelect['numero_quarto']?></option>
+                    <?php
+                    endwhile;
+                ?>
+                </select><br>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="data-aluguel">Data de Início:</label>
+            </div>
+            <div class="col-75">
+                <input type="date" id="data-aluguel" name="data-aluguel" value="<?=((isset($linha['data_aluguel'])) ? $linha['data_aluguel'] : '')?>"><br/>
+            </div>
+        </div>
+        <div class="row">
+            <input type="submit" name="acao" value="<?=((isset($_GET['id'])) ? 'atualizar' : 'gravar')?>">
+        </div>
+    </form>
+</main>

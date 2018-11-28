@@ -94,23 +94,69 @@ if (isset($_GET['id'])){
 }
 
 ?>
-<form method="POST">
-    <?=$mensagem?>
-    <input type="hidden" id="id" name="id" value="<?=((isset($_GET['id'])) ? $_GET['id'] : '0')?>">
-    <label for="numero_quarto">Número do Quarto:</label>
-    <input type="number" id="numero_quarto" name="numero_quarto" value="<?=((isset($linha['numero_quarto'])) ? $linha['numero_quarto'] : '')?>"><br/>
-    <label for="qtd-cama-solteiro">Quantidade de Camas de Solteiro:</label>
-    <input type="number" id="qtd-cama-solteiro" name="qtd-cama-solteiro" value="<?=((isset($linha['qtd_cama_solteiro'])) ? $linha['qtd_cama_solteiro'] : '')?>"><br/>
-    <label for="qtd-cama-casal">Quantidade de Camas de Casal:</label>
-    <input type="number" id="qtd-cama-casal" name="qtd-cama-casal" value="<?=((isset($linha['qtd_cama_casal'])) ? $linha['qtd_cama_casal'] : '')?>"><br/>
-    <label for="qtd-banheiro">Quantidade de Banheiros:</label>
-    <input type="number" id="qtd-banheiro" name="qtd-banheiro" value="<?=((isset($linha['qtd_banheiro'])) ? $linha['qtd_banheiro'] : '')?>"><br/>
-    <label for="qtd-ar-condicionado">Quantidade de Ares Condicionados:</label>
-    <input type="number" id="qtd-ar-condicionado" name="qtd-ar-condicionado" value="<?=((isset($linha['qtd_ar_condicionado'])) ? $linha['qtd_ar_condicionado'] : '')?>"><br/>
-    <label for="qtd-televisao">Quantidade de Camas de Casal:</label>
-    <input type="number" id="qtd-televisao" name="qtd-televisao" value="<?=((isset($linha['qtd_televisao'])) ? $linha['qtd_televisao'] : '')?>"><br/>
-    <label for="preco-diaria">Preço Diária:</label>
-    <input type="text" id="preco-diaria" name="preco-diaria" value="<?=((isset($linha['preco_diaria'])) ? $linha['preco_diaria'] : '')?>"><br/>
-
-    <input type="submit" name="acao" value="<?=((isset($_GET['id'])) ? 'atualizar' : 'gravar')?>">
-</form>
+<main>
+    <form method="POST">
+        <h1>Cadastro de Apartamento</h1>
+        <?=$mensagem?>
+        <input type="hidden" id="id" name="id" value="<?=((isset($_GET['id'])) ? $_GET['id'] : '0')?>">
+        <div class="row">
+            <div class="col-25">
+                <label for="numero_quarto">Número do Quarto:</label>
+            </div>
+            <div class="col-75">   
+                <input type="number" id="numero_quarto" name="numero_quarto" value="<?=((isset($linha['numero_quarto'])) ? $linha['numero_quarto'] : '')?>"><br/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="qtd-cama-solteiro">Quantidade de Camas de Solteiro:</label>
+            </div>
+            <div class="col-75"> 
+                <input type="number" id="qtd-cama-solteiro" name="qtd-cama-solteiro" value="<?=((isset($linha['qtd_cama_solteiro'])) ? $linha['qtd_cama_solteiro'] : '')?>"><br/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="qtd-cama-casal">Quantidade de Camas de Casal:</label>
+            </div>
+            <div class="col-75"> 
+                <input type="number" id="qtd-cama-casal" name="qtd-cama-casal" value="<?=((isset($linha['qtd_cama_casal'])) ? $linha['qtd_cama_casal'] : '')?>"><br/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="qtd-banheiro">Quantidade de Banheiros:</label>
+            </div>
+            <div class="col-75"> 
+                <input type="number" id="qtd-banheiro" name="qtd-banheiro" value="<?=((isset($linha['qtd_banheiro'])) ? $linha['qtd_banheiro'] : '')?>"><br/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="qtd-ar-condicionado">Quantidade de Ares Condicionados:</label>
+            </div>
+            <div class="col-75"> 
+                <input type="number" id="qtd-ar-condicionado" name="qtd-ar-condicionado" value="<?=((isset($linha['qtd_ar_condicionado'])) ? $linha['qtd_ar_condicionado'] : '')?>"><br/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="qtd-televisao">Quantidade de Camas de Casal:</label>
+            </div>
+            <div class="col-75"> 
+                <input type="number" id="qtd-televisao" name="qtd-televisao" value="<?=((isset($linha['qtd_televisao'])) ? $linha['qtd_televisao'] : '')?>"><br/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="preco-diaria">Preço Diária:</label>
+            </div>
+            <div class="col-75"> 
+                <input type="text" id="preco-diaria" name="preco-diaria" value="<?=((isset($linha['preco_diaria'])) ? $linha['preco_diaria'] : '')?>"><br/>
+            </div>
+        </div>
+        <div class="row">
+            <input type="submit" name="acao" value="<?=((isset($_GET['id'])) ? 'atualizar' : 'gravar')?>">
+        </div>
+    </form>
+</main>

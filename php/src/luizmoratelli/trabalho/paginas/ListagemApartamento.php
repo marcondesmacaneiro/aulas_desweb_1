@@ -36,37 +36,40 @@ $sql = "
 
 $retorno = executarComandoBanco($conn, $sql);
 ?>
-<?=$mensagem?>
-<table border="1">
-    <tr>
-        <th>ID</th>
-        <th>Número Quarto</th>
-        <th>Qtd. Camas de Solteiro</th>
-        <th>Qtd. Camas de Casal</th>
-        <th>Qtd. Banheiros</th>
-        <th>Qtd. Ares condicionados</th>
-        <th>Qtd. Televisão</th>
-        <th>Preço Diária</th>
-        <th>Ações</th>
-    </tr>
-<?php
-while ($linha = pg_fetch_array($retorno)):
-?>
-    <tr>
-        <td><?=$linha['id']?></td>
-        <td><?=$linha['numero_quarto']?></td>
-        <td><?=$linha['qtd_cama_solteiro']?></td>
-        <td><?=$linha['qtd_cama_casal']?></td>
-        <td><?=$linha['qtd_banheiro']?></td>
-        <td><?=$linha['qtd_ar_condicionado']?></td>
-        <td><?=$linha['qtd_televisao']?></td>
-        <td>R$ <?=number_format($linha['preco_diaria'], 2, ',', '.');?></td>
-        <td>
-            <a href="?url=listagemApartamento&acao=excluir&id=<?=$linha['id']?>">Excluir</a>
-            <a href="?url=cadastroApartamento&id=<?=$linha['id']?>">Atualizar</a>
-        </td>
-    </tr>
-<?php
-endwhile;
-?>
-</table>
+<main>
+    <h1>Listagem de Apartamentos</h1>
+    <?=$mensagem?>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Número Quarto</th>
+            <th>Qtd. Camas de Solteiro</th>
+            <th>Qtd. Camas de Casal</th>
+            <th>Qtd. Banheiros</th>
+            <th>Qtd. Ares condicionados</th>
+            <th>Qtd. Televisão</th>
+            <th>Preço Diária</th>
+            <th>Ações</th>
+        </tr>
+    <?php
+    while ($linha = pg_fetch_array($retorno)):
+    ?>
+        <tr>
+            <td><?=$linha['id']?></td>
+            <td><?=$linha['numero_quarto']?></td>
+            <td><?=$linha['qtd_cama_solteiro']?></td>
+            <td><?=$linha['qtd_cama_casal']?></td>
+            <td><?=$linha['qtd_banheiro']?></td>
+            <td><?=$linha['qtd_ar_condicionado']?></td>
+            <td><?=$linha['qtd_televisao']?></td>
+            <td>R$ <?=number_format($linha['preco_diaria'], 2, ',', '.');?></td>
+            <td>
+                <a href="?url=listagemApartamento&acao=excluir&id=<?=$linha['id']?>">Excluir</a>
+                <a href="?url=cadastroApartamento&id=<?=$linha['id']?>">Atualizar</a>
+            </td>
+        </tr>
+    <?php
+    endwhile;
+    ?>
+    </table>
+</main>

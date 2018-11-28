@@ -7,5 +7,6 @@
         <li><a href="?url=listagemHospede">Listagem de Hospede</a></li>
         <li><a href="?url=cadastroReserva">Cadastro de Reserva</a></li>
         <li><a href="?url=listagemReserva">Listagem de Reserva</a></li>
+        <li><a href="?url=logout">Logout</a></li>
     </ul>
 </nav>

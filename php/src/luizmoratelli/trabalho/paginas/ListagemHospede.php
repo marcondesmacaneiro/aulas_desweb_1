@@ -36,27 +36,30 @@ SELECT *
 
 $retorno = executarComandoBanco($conn, $sql);
 ?>
-<?=$mensagem?>
-<table border="1">
-    <tr>
-        <th>ID</th>
-        <th>Nome</th>
-        <th>Documento</th>
-        <th>Ações</th>
-    </tr>
-<?php
-while ($linha = pg_fetch_array($retorno)):
-?>
-    <tr>
-        <td><?=$linha['id']?></td>
-        <td><?=$linha['nome']?></td>
-        <td><?=$linha['documento']?></td>
-        <td>
-            <a href="?url=listagemHospede&acao=excluir&id=<?=$linha['id']?>">Excluir</a>
-            <a href="?url=cadastroHospede&id=<?=$linha['id']?>">Atualizar</a>
-        </td>
-    </tr>
-<?php
-endwhile;
-?>
-</table>
+<main>
+    <h1>Listagem de Hóspedes</h1>
+    <?=$mensagem?>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Documento</th>
+            <th>Ações</th>
+        </tr>
+    <?php
+    while ($linha = pg_fetch_array($retorno)):
+    ?>
+        <tr>
+            <td><?=$linha['id']?></td>
+            <td><?=$linha['nome']?></td>
+            <td><?=$linha['documento']?></td>
+            <td>
+                <a href="?url=listagemHospede&acao=excluir&id=<?=$linha['id']?>">Excluir</a>
+                <a href="?url=cadastroHospede&id=<?=$linha['id']?>">Atualizar</a>
+            </td>
+        </tr>
+    <?php
+    endwhile;
+    ?>
+    </table>
+</main>

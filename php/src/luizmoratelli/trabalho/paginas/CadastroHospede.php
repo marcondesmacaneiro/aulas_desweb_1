@@ -69,13 +69,29 @@ if (isset($_GET['id'])){
 }
 
 ?>
-<form method="POST">
-    <?=$mensagem?>
-    <input type="hidden" id="id" name="id" value="<?=((isset($_GET['id'])) ? $_GET['id'] : '0')?>">
-    <label for="nome">Nome:</label>
-    <input type="text" id="nome" name="nome" value="<?=((isset($linha['nome'])) ? $linha['nome'] : '')?>"><br/>
-    <label for="documento">Documento:</label>
-    <input type="text" id="documento" name="documento" value="<?=((isset($linha['documento'])) ? $linha['documento'] : '')?>"><br/>
-
-    <input type="submit" name="acao" value="<?=((isset($_GET['id'])) ? 'atualizar' : 'gravar')?>">
-</form>
+<main>
+    <form method="POST">
+        <h1>Cadastro de Hóspede</h1>
+        <?=$mensagem?>
+        <input type="hidden" id="id" name="id" value="<?=((isset($_GET['id'])) ? $_GET['id'] : '0')?>">
+        <div class="row">
+            <div class="col-25">
+                <label for="nome">Nome:</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="nome" name="nome" value="<?=((isset($linha['nome'])) ? $linha['nome'] : '')?>"><br/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="documento">Documento:</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="documento" name="documento" value="<?=((isset($linha['documento'])) ? $linha['documento'] : '')?>"><br/>
+            </div>
+        </div>
+        <div class="row">
+            <input type="submit" name="acao" value="<?=((isset($_GET['id'])) ? 'atualizar' : 'gravar')?>">
+        </div>
+    </form>
+</main>
