@@ -141,7 +141,7 @@ if (isset($_GET['id'])){
         </div>
         <div class="row">
             <div class="col-25">
-                <label for="qtd-televisao">Quantidade de Camas de Casal:</label>
+                <label for="qtd-televisao">Quantidade de Televisões:</label>
             </div>
             <div class="col-75"> 
                 <input type="number" id="qtd-televisao" name="qtd-televisao" value="<?=((isset($linha['qtd_televisao'])) ? $linha['qtd_televisao'] : '')?>"><br/>
