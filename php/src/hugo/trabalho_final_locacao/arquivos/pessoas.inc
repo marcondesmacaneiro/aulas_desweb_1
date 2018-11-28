@@ -38,17 +38,27 @@
                 $iCodigoPessoa = $_GET['remove'];
                 deleta('tbpessoa', 'pescodigo', $iCodigoPessoa);
             }
+            // verificacao se fora clicado em gerar senha na tabela
             if(isset($_GET['gerar'])){
+                // ao entrar na condicao, será gerada uma senha de 10 caracteres aleatorios 
                 $sSelectEmail     = 'select pesmail from tbpessoa where pescodigo = '.$_GET['gerar'].'; ';
                 $aResultado       = executa($sSelectEmail);
+                // armazenando o email do determinado codigo da pessoa
                 $sEmail           = $aResultado[0]['pesmail'];
+                // armazenamento dos caracteres que poderao ter na senha
                 $sCaracteres      = '123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKMNOPQRSTUVWXYZ';
+                // str_shuffle server para misturar todos os caracteres
                 $sMistura         = str_shuffle($sCaracteres);
+                // substr irá pegar 10 caracteres da variavel que teve a mistura
                 $sSenha           = substr($sMistura,0,10);
+                // mostra a nova senha para que seja possível fazer o login
                 echo 'Senha '.$sSenha;
-                enviaEmail($sEmail, 'Login e Senha Gerados', 'Seja bem vindo, para logar no sistema dever� utilizar como usu�rio o e-mail: '.$sEmail.' e a senha: '.$sSenha.' ');
+                // funcao que deveria enviar o email, esta com problemas no momento
+                enviaEmail($sEmail, 'Login e Senha Gerados', 'Seja bem vindo, para logar no sistema deverá utilizar como usuario o e-mail: '.$sEmail.' e a senha: '.$sSenha.' ');
+                // converte a senha para md5
                 $sSenhaCodificada = md5($sSenha);
                 $iCodigoPessoa    = $_GET['gerar'];
+                // funcao de atualizacao da nova senha no banco de dados
                 atualiza('tbpessoa','pessenha',$sSenhaCodificada,'pescodigo',$iCodigoPessoa);
             }
             geraTabela();
@@ -56,6 +66,7 @@
         ?>
         <hr>
         <br>
+         <!-- geracao de formulario de cadastro-->
         <form action="index.php?pagina=pessoas" method="post">
             <label for="codigo">Código:<span>*</span></label>
             <input  type="number" name="codigo" required="required">
@@ -77,9 +88,9 @@
         $iCodigoPessoa = (int) $_POST['codigo'];
         $iNomePessoa   = $_POST['nome'];
         $iEmailPessoa  = $_POST['email'];
-        
+        // preenchimento de paramentros para a funcao de insercao
         $aColunas = ['pescodigo', 'pesnome', 'pesmail'];
         $aValores = [$iCodigoPessoa, $iNomePessoa, $iEmailPessoa];
-        
+        // funcao de insercao que esta localizada no arquivo conexao.php
         insere('tbpessoa', $aColunas, $aValores);
     }
