@@ -1,69 +1,87 @@
-CREATE TABLE `PESSOA` (
+CREATE TABLE `motorista` (
   `id` int(10) UNSIGNED NOT NULL,
-  `primeiro_nome` varchar(100) COLLATE utf8mb4_unicode_ci ,
-  `segundo_nome` varchar(100) COLLATE utf8mb4_unicode_ci ,
-  `email` varchar(100) COLLATE utf8mb4_unicode_ci ,
-  `tipo` int(10) NOT NULL, /* MOTORISTA OU DONO OD CARRO*/
-   `cpf` int(11) NOT NULL,
-   `carro_id` INT(10) UNSIGNED NOT NULL,
-   `motorista_carro` int(10) UNSIGNED NOT NULL
+  `nome` varchar(100),
+  `sobrenome` varchar(100),
+  `carro_id` int(10) UNSIGNED
+) ;
 
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-ALTER TABLE `PESSOA`
- ADD PRIMARY KEY (`id`);
-ALTER TABLE `PESSOA`
- MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
-COMMIT;
 
-CREATE TABLE `USUARIO` (
+CREATE TABLE `usuario` (
   `id` int(10) UNSIGNED NOT NULL,
-  `login` varchar(100) COLLATE utf8mb4_unicode_ci,
-  `senha` varchar(100) COLLATE utf8mb4_unicode_ci
+  `login` varchar(100) ,
+  `senha` varchar(100) 
+) ;
 
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-ALTER TABLE `USUARIO`
- ADD PRIMARY KEY (`id`);
-ALTER TABLE `USUARIO`
- MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
-COMMIT;
 
-CREATE TABLE `CARRO`(
+CREATE TABLE `estacionamento` (
   `id` int(10) UNSIGNED NOT NULL,
-  `marca` varchar(100) COLLATE utf8mb4_unicode_ci ,
-  `modelo` varchar(100) COLLATE utf8mb4_unicode_ci ,
-  `cor` varchar(100) COLLATE utf8mb4_unicode_ci ,
-  `cidade` varchar(50) COLLATE utf8mb4_unicode_ci ,
-  `estado` varchar(2) COLLATE utf8mb4_unicode_ci ,
-  `placa` varchar(7) COLLATE utf8mb4_unicode_ci,
-  `dono_id` int(10) UNSIGNED NOT null 
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-ALTER TABLE `CARRO`
+  `vagas_livres` int(10) UNSIGNED,
+  `vagas_ocupadas` int(10) UNSIGNED,
+  `lucro` int(20) UNSIGNED
+) ;
+
+
+CREATE TABLE `carro` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `placa` varchar(7) NOT NULL UNIQUE ,
+  `saldo` DECIMAL (10,2),
+  `cidade` VARCHAR (40),
+  `estado` VARCHAR(2),
+  `vaga_id` int(10) UNSIGNED
+) ;
+
+
+CREATE TABLE `vaga` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `livre` BOOLEAN ,
+  `carro` int(10) ,
+  `entrada` TIMESTAMP NOT NULL ,
+  `saida` TIMESTAMP,
+  `preco_hora` DECIMAL (10,2),
+  `saldo` DECIMAL (10,2),
+  `estacionamento_id` int(10) UNSIGNED
+) ;
+
+
+-- ALTER
+-- PK
+ALTER TABLE `motorista`
+  ADD PRIMARY KEY (`id`);
+ALTER TABLE `motorista`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+
+ALTER TABLE `usuario`
+  ADD PRIMARY KEY (`id`);
+ALTER TABLE `usuario`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `estacionamento`
  ADD PRIMARY KEY (`id`);
-ALTER TABLE `CARRO`
+ALTER TABLE `estacionamento`
  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
-COMMIT;
 
-CREATE TABLE `VAGA`(
-    `id` int(10) UNSIGNED NOT NULL,
-    `carro` int(10) UNSIGNED NOT NULL,
-    `entrada` DATE NOT NULL, 
-    `saida` DATE
-)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-ALTER TABLE `VAGA`
+ ALTER TABLE `carro`
  ADD PRIMARY KEY (`id`);
-ALTER TABLE `VAGA`
+ALTER TABLE `carro`
  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
-COMMIT;
 
-CREATE TABLE `MOTORISTA_CARRO`(
-    `id` int(10) UNSIGNED NOT NULL,
-    `pessoa` int(10) UNSIGNED NOT NULL,
-    `carro` int(10) UNSIGNED NOT NULL
 
-)
-ALTER TABLE `MOTORISTA_CARRO`
+ ALTER TABLE `vaga`
  ADD PRIMARY KEY (`id`);
-ALTER TABLE `MOTORISTA_CARRO`
+ALTER TABLE `vaga`
  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
-COMMIT;
 
+
+
+
+ -- FK
+
+ ALTER TABLE `vaga`
+ ADD CONSTRAINT `fk_estacionamento` FOREIGN KEY (`estacionamento_id`) REFERENCES `estacionamento` (`id`);
+
+ ALTER TABLE `carro`
+ ADD CONSTRAINT `fk_vaga` FOREIGN KEY (`vaga_id`) REFERENCES `vaga` (`id`);
+
+ ALTER TABLE `motorista`
+  ADD CONSTRAINT `fk_carro` FOREIGN KEY (`carro_id`) REFERENCES `carro` (`id`);

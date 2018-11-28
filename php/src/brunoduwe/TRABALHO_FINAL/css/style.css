@@ -1,0 +1,291 @@
+@media only screen and (max-device-width: 767px) {
+    .login {
+        height: 30px;
+        width: 30px;
+    }
+    .login2 {
+        height: 35px;
+        width: 350px;
+    }
+    .btn_login {
+        height: 35px;
+        width: 70px;
+    }
+    .index4 {
+        width: 412px;
+        height: 380px;
+        margin-top: 15%;
+    }
+    .index {
+        width: 500px;
+        height: 400px;
+    }
+    .index2 {
+        width: 700px;
+        height: 400px;
+    }
+    .index3 {
+        width: 1000px;
+        height: 400px;
+    }
+    .cliente {
+        width: 200px;
+        height: 40px;
+    }
+    .cliente2 {
+        width: 300px;
+        height: 40px;
+    }
+    .menu {
+        height: 100px;
+    }
+    #menu {
+        white-space: pre-line;
+    }
+    .conteudo {
+        padding-top: 150px;
+    }
+    .btn-primary-outline {
+        background-color: transparent;
+        border-color: transparent;
+        box-shadow: none;
+        color: lightgray;
+        text-decoration: none;
+    }
+    .btn-primary-outline:hover {
+        background-color: rgba(88, 85, 85, 0.719);
+        border-color: rgb(34, 34, 34);
+        box-shadow: none;
+        color: lightcyan;
+        text-decoration: none;
+    }
+    .btn-primary-outline-active {
+        background-color: rgba(88, 85, 85, 0.719);
+        border-color: rgb(34, 34, 34);
+        box-shadow: none;
+        color: lightcyan;
+        text-decoration: none;
+    }
+    .btn-primary-outline-active:hover {
+        background-color: rgba(88, 85, 85, 0.719);
+        border-color: rgb(34, 34, 34);
+        box-shadow: none;
+        color: lightcyan;
+        text-decoration: none;
+    }
+    .caixa {
+        width: 300px;
+        height: 225px;
+    }
+    .clearleft {
+        clear: left;
+    }
+    .clearright {
+        clear: right;
+    }
+    .pessoa:hover {
+        color:#fff;
+        background-color: transparent;
+        border-color:#545b62;
+    }
+    select {
+        text-align: center;
+        text-align-last: center;
+    }
+    .descricao {
+        height: 150px;
+    }
+}
+@media only screen and (max-device-width: 1321px) and (min-device-width: 768px) {
+    .login {
+        height: 30px;
+        width: 30px;
+    }
+    .login2 {
+        height: 35px;
+        width: 350px;
+    }
+    .btn_login {
+        height: 35px;
+        width: 70px;
+    }
+    .index4 {
+        width: 412px;
+        height: 380px;
+        margin-top: 15%;
+    }
+    .index {
+        width: 500px;
+        height: 400px;
+    }
+    .index2 {
+        width: 700px;
+        height: 400px;
+    }
+    .index3 {
+        width: 1000px;
+        height: 400px;
+    }
+    .cliente {
+        width: 200px;
+        height: 40px;
+    }
+    .cliente2 {
+        width: 300px;
+        height: 40px;
+    }
+    .menu {
+        height: auto;
+    }   
+    #menu {
+        white-space: pre-line;
+    }
+    .conteudo {
+        padding-top: 150px;
+    }
+    .btn-primary-outline {
+        background-color: transparent;
+        border-color: transparent;
+        box-shadow: none;
+        color: lightgray;
+        text-decoration: none;
+    }
+    .btn-primary-outline:hover {
+        background-color: rgba(88, 85, 85, 0.719);
+        border-color: rgb(34, 34, 34);
+        box-shadow: none;
+        color: lightcyan;
+        text-decoration: none;
+    }
+    .btn-primary-outline-active {
+        background-color: rgba(88, 85, 85, 0.719);
+        border-color: rgb(34, 34, 34);
+        box-shadow: none;
+        color: lightcyan;
+        text-decoration: none;
+    }
+    .btn-primary-outline-active:hover {
+        background-color: rgba(88, 85, 85, 0.719);
+        border-color: rgb(34, 34, 34);
+        box-shadow: none;
+        color: lightcyan;
+        text-decoration: none;
+    }
+    .caixa {
+        width: 300px;
+        height: 225px;
+    }
+    .clearleft {
+        clear: left;
+    }
+    .clearright {
+        clear: right;
+    }
+    .pessoa:hover {
+        color:#fff;
+        background-color: transparent;
+        border-color:#545b62;
+    }
+    select {
+        text-align: center;
+        text-align-last: center;
+    }
+    .descricao {
+        height: 150px;
+    }
+}
+@media only screen and (min-device-width: 1322px) {
+    .login {
+        height: 30px;
+        width: 30px;
+    }
+    .login2 {
+        height: 35px;
+        width: 350px;
+    }
+    .btn_login {
+        height: 35px;
+        width: 70px;
+    }
+    .index4 {
+        width: 412px;
+        height: 380px;
+        margin-top: 15%;
+    }
+    .index {
+        width: 500px;
+        height: 400px;
+    }
+    .index2 {
+        width: 700px;
+        height: 400px;
+    }
+    .index3 {
+        width: 1000px;
+        height: 400px;
+    }
+    .cliente {
+        width: 200px;
+        height: 40px;
+    }
+    .cliente2 {
+        width: 300px;
+        height: 40px;
+    }
+    .menu {
+        height: 50px;
+    }
+    .conteudo {
+        padding-top: 80px;
+    }
+    .btn-primary-outline {
+        background-color: transparent;
+        border-color: transparent;
+        box-shadow: none;
+        color: lightgray;
+        text-decoration: none;
+    }
+    .btn-primary-outline:hover {
+        background-color: rgba(88, 85, 85, 0.719);
+        border-color: rgb(34, 34, 34);
+        box-shadow: none;
+        color: lightcyan;
+        text-decoration: none;
+    }
+    .btn-primary-outline-active {
+        background-color: rgba(88, 85, 85, 0.719);
+        border-color: rgb(34, 34, 34);
+        box-shadow: none;
+        color: lightcyan;
+        text-decoration: none;
+    }
+    .btn-primary-outline-active:hover {
+        background-color: rgba(88, 85, 85, 0.719);
+        border-color: rgb(34, 34, 34);
+        box-shadow: none;
+        color: lightcyan;
+        text-decoration: none;
+    }
+    .caixa {
+        width: 300px;
+        height: 225px;
+    }
+    .clearleft {
+        clear: left;
+    }
+    .clearright {
+        clear: right;
+    }
+    .pessoa:hover {
+        color:#fff;
+        background-color: transparent;
+        border-color:#545b62;
+    }
+    select {
+        text-align: center;
+        text-align-last: center;
+    }
+    .descricao {
+        height: 150px;
+    }
+}

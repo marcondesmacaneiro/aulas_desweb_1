@@ -1,0 +1,18 @@
+* Deverá ser aberto primeiramente o arquivo login.php.
+
+* Para que possa logar como adm, basta dar submit com os campos em branco.
+
+*Caso deseja cadastrar outro email e senha para acessar o sistema, basta clicar em pessoas no menu,
+cadastrar um email que você tenha acesso, logo após cadastrar recarregue a página, vá na tabela gerada com seu cadastro, clica em gerar na coluna Gerar Senha,
+ao clicar, será enviado um e-mail para seu e-mail válido cadastrado com o usuário e senha para que possa realizar login.
+
+*Ao realizar o login com o usuário e senha enviados no email, você terá somente acesso a parte de pedidos, sendo que poderá realizar pedidos(locações) somente para seu 
+próprio usuário.
+
+Obs 1: Deve-se realizar o cadastro de alguns carros para poder realizar pedidos.
+Obs 2: Deve-se realizar o cadastro de clientes para que possa realizar pedido de locação dos mesmos.
+Obs 3: Insira uma quantidade de créditos considerável para que possa ser permitido a realização de pedidos de locações de acordo com os créditos.
+Obs 4: Existe uma verificação de crédito inicial que irá verificar se o pedido de locação tem valor menor que o crédito de determinado cliente.
+Obs 5: Caso seja realizado mais de um pedido, em todos os pedidos adicionais, o sistema irá atríbuir em uma soma os pedidos anteriores realizados junto com o pedido atual e verificar se é menor que o credito de determinado cliente.
+Obs 6: Ao realizar algum pedido, deve-se adicionar pelo menos um carro clicando no botão +, a geração da mini tabela é realizado por js com base em meus conhecimentos adquiridos, sendo que o campo total é feito com js também.
+Obs 7: Existe uma campo invisível onde o js joga em formato JSON para que o php pegue todos os carros incluído e armazene na tabela tbpedidocarro.

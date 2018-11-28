@@ -1,4 +1,8 @@
 <a href="index.php">Tela Inicial</a>
+<br>
+<a href="listagempessoas.php">Listagem Pessoas</a>
+<link href="estilo.css" rel="stylesheet">
+
 <hr>
 <?php
     include "conexao.php";

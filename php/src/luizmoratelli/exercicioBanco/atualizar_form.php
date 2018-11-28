@@ -28,7 +28,7 @@ $linha = mysqli_fetch_array($query);
     <label for="primeiro-nome">Primeiro Nome:</label>
     <input type="hidden" id="id" name="id" value="<?=$linha['id']?>">
     <input type="text" id="primeiro-nome" name="primeiro-nome" value="<?=$linha['primeiro_nome']?>">
-    <input type="text" id="segundo-nome" name="segundo-nome" value="<?=$linha['segundo_nome']?>">
+    <input type="text" id="segundo-nome" name="segundo-nome" value="<?=$linha['segundo_nomes']?>">
     <input type="text" id="email" name="email" value="<?=$linha['email']?>">
     <input type="text" id="password" name="password" value="<?=$linha['password']?>">
     <input type="text" id="cidade" name="cidade" value="<?=$linha['cidade']?>">
