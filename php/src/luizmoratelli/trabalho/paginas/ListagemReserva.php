@@ -42,7 +42,7 @@ $sql = "
 $retorno = executarComandoBanco($conn, $sql);
 ?>
 <main>
-    <h1>Listagems de Reservas</h1>
+    <h1>Listagem de Reservas</h1>
     <?=$mensagem?>
     <table>
         <tr>
