@@ -14,7 +14,7 @@ error_reporting(1);
         //echo $placa;
         $query = "UPDATE carro SET 
                     placa = '{$placa}', saldo = '{$saldo}'
-                    , email = '{$email}', cidade = '{$cidade}', estado = '{$estado}' WHERE id = ".$_GET['id'];
+                    , cidade = '{$cidade}', estado = '{$estado}' WHERE id = ".$_GET['id'];
         ?><br>
         <?php
         #echo $query;
