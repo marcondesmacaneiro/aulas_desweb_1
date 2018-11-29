@@ -31,8 +31,7 @@
                     <td><?=$linha["data"]?></td>
                     <td>
                         <a href="cadastrarpedido.php?codigo=<?=$linha["codigo"]?>">Detalhar Pedido</a> 
-                        <br>   
-                        <a href="remove_produto.php?codigo=<?=$linha["codigo"]?>">Excluir Pedido</a>
+                        
                   </td>
                 </tr>
             <?php
