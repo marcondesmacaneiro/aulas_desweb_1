@@ -19,6 +19,7 @@
         $query = "insert into produto (descricao,caracteristica,und_v,barras,precovenda,obs,tempo)
         values ('{$descricao}','{$caracteristica}','{$und_v}','{$barras}','{$precovenda}','{$obs}','{$tempo}')";
        
+        echo $query;
                       if (mysqli_query($conn, $query)) {
             echo "Registro gravado com sucesso!";
         }

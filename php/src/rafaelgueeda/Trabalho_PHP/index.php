@@ -2,7 +2,7 @@
     include "conexao.php";
     
 ?>
-<link href="estilo.css" rel="stylesheet">
+
 
 <a class="cadastroproduto" href="cadastroproduto.php">Cadastrar Produtos</a>
 
@@ -13,4 +13,4 @@
 <br>
 <a href="listagempessoas.php">Listagem de Pessoas</a>
 <br>
-<a href="lancamovimentacao.php">Lançamento de Movimentaçao</a>
+<a href="listagempedidos.php">Listagem de Pedidos</a>

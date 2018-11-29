@@ -64,8 +64,8 @@ $retorno = executarComandoBanco($conn, $sql);
             <td><?=$linha['qtd_televisao']?></td>
             <td>R$ <?=number_format($linha['preco_diaria'], 2, ',', '.');?></td>
             <td>
-                <a href="?url=listagemApartamento&acao=excluir&id=<?=$linha['id']?>">Excluir</a>
-                <a href="?url=cadastroApartamento&id=<?=$linha['id']?>">Atualizar</a>
+                <a href="?url=listagemApartamento&acao=excluir&id=<?=$linha['id']?>"><i class="fas fa-trash"></i></a>
+                <a href="?url=cadastroApartamento&id=<?=$linha['id']?>"><i class="fas fa-pencil-alt"></i></a>
             </td>
         </tr>
     <?php
