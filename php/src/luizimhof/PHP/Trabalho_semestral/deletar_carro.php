@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Excluir carro</title>
+	
+</head>
+<body>
+
 <?php
     include 'conexao.php';
     if(isset($_POST['Deletar'])){
@@ -38,3 +46,4 @@ Deseja deletar mesmo?
 <input type="submit" name="Deletar" value="Sim">
 
 </form>
+</body>

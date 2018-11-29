@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cadastrar carro</title>
+	
+</head>
+
+<body>
 <a href="seguro.php"> Voltar</a>
 <hr>
 
@@ -42,3 +50,5 @@
     <input type="submit" name="gravar" value="Gravar">
     <br>
 </form>
+
+</body>

@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Controlar carros</title>
+	
+</head>
+<body>
 <?php
     include 'conexao.php';
 
@@ -55,3 +62,4 @@
 <a href="cadastro_carro.php">Adicionar um cadastro de carro</a>
 <hr>
 
+</body>

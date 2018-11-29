@@ -21,11 +21,12 @@
 
 if(isset($_POST['alterar'])){
     $vaga = $_POST["vaga"];
-    echo $vaga[0];
+    
+
     $query = "SELECT placa FROM carro WHERE id = ".$_GET['id'];
     $result = mysqli_query($conn, $query);
     $placa = mysqli_fetch_array($result);
-    echo $placa["placa"];
+  
     $query = "UPDATE carro SET 
                     vaga_id = '{$vaga[0]}'
                      WHERE id = ".$_GET['id'];
@@ -38,7 +39,7 @@ if(isset($_POST['alterar'])){
                     livre = 0, entrada = '{$data}', carro = '{$placa["placa"]}'
                      WHERE id = ".$vaga[0];
 
-            echo $query;
+           
             if ( mysqli_query($conn, $query)){
                 
                 ?>

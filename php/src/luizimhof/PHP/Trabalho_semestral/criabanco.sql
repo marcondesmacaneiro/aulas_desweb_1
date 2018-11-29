@@ -21,8 +21,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `estacionamento`
 --
-CREATE DATABASE IF NOT EXISTS `estacionamento1` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `estacionamento1`;
+CREATE DATABASE IF NOT EXISTS `estacionamento` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `estacionamento`;
 
 -- --------------------------------------------------------
 

@@ -12,7 +12,9 @@
         echo "O que deseja fazer?";
         ?>
        <br><br>
-        <a href="listar_carro.php">Verificar carros</a>
+		<a href="listar_carro.php">Verificar carros</a>
+		<br><br>
+		<a href="listar_estacionamento.php">Controlar estacionamento</a>
         
     <?php
 

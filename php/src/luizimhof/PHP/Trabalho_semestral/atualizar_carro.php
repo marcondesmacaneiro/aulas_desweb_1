@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Atualizar informações</title>
+	
+</head>
+<body>
+
 <a href="listar_carro.php"> Voltar</a>
 <hr>
 
@@ -56,3 +64,5 @@ error_reporting(1);
     
 
 </form>
+
+</body>
