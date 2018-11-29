@@ -48,7 +48,6 @@
         if($aResultado){
             $_SESSION['usuario'] = serialize($aResultado[0]); //recebendo o resultado da consulta ele terá todas as informações do usuário
             header('Location: arquivos/index.php?pagina=home');
-            echo '<span>Deu boa</span>';
         }
         // caso a consulta não retorne nenhum valor, significa que o email e senha informado não existem
         else{
