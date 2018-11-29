@@ -4,6 +4,14 @@
    
 ?>
 
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Remover do estacionamento</title>
+	
+</head>
+<body>
+
 
 <a href="listar_carro.php"> Voltar</a>
 <hr>
@@ -23,9 +31,7 @@
     $hours = $diff / ( 60 * 60 );
     
     $hours = round($hours, 2);
-    echo $hours;
     $valortotal = $linha["preco_hora"] * $hours ; 
-    echo $valortotal;
 
 ?>
 <table border="1">
@@ -111,7 +117,6 @@ function atualizar_saldos($valortotal, $vagaid){
     $query = "UPDATE estacionamento SET 
                 lucro = '{$lucro}'
                 WHERE id = ".$estacionamento;
-    echo $query;
     mysqli_query($conn, $query);
     
     
@@ -122,3 +127,4 @@ function atualizar_saldos($valortotal, $vagaid){
 ?>
 
 
+</body>
