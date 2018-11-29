@@ -1,0 +1,9 @@
+body{
+    font-weight: bold;
+    background: url(../back.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+}
