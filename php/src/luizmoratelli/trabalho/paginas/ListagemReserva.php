@@ -63,8 +63,8 @@ $retorno = executarComandoBanco($conn, $sql);
             <td><?=$linha['numero_quarto']?></td>        
             <td><?=$linha['documento']?> - <?=$linha['nome']?></td>
             <td>
-                <a href="?url=listagemReserva&acao=excluir&id=<?=$linha['res_id']?>">Excluir</a>
-                <a href="?url=cadastroReserva&id=<?=$linha['res_id']?>">Atualizar</a>
+                <a href="?url=listagemReserva&acao=excluir&id=<?=$linha['res_id']?>"><i class="fas fa-trash"></i></a>
+                <a href="?url=cadastroReserva&id=<?=$linha['res_id']?>"><i class="fas fa-pencil-alt"></i></a>
             </td>
         </tr>
     <?php

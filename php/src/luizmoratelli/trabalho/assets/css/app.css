@@ -170,3 +170,6 @@ table a {
 table a:hover {
     color: #a1562a;
 }
+i {
+    margin-right: 5px;
+}

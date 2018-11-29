@@ -18,39 +18,43 @@ if (isset($_POST['acao'])) {
         $idHospede = $_POST['hos-id'];
         $idApartamento = $_POST['apt-id'];
         $dataAluguel = new DateTime($_POST['data-aluguel']);
-        $dataAluguel = $dataAluguel->format('d-m-Y H:i:s');
 
-        $sql = "
-            SELECT *
-              FROM reserva
-             WHERE apt_id = $idApartamento
-               AND data_aluguel = '$dataAluguel'";
-        
-        $retorno = executarComandoBanco($conn, $sql);
-
-        if (pg_num_rows($retorno) == 0) {
-
+        if ($dataAluguel >= new DateTime()) {
+            $dataAluguel = $dataAluguel->format('d-m-Y H:i:s');
             $sql = "
-                INSERT INTO reserva (
-                                hos_id,
-                                apt_id,
-                                data_Aluguel
-                            )
-                            VALUES(
-                                $idHospede,
-                                $idApartamento,
-                                '$dataAluguel'
-                            )";
+                SELECT *
+                FROM reserva
+                WHERE apt_id = $idApartamento
+                AND data_aluguel = '$dataAluguel'";
             
-            $retorno = pg_affected_rows(executarComandoBanco($conn, $sql));
+            $retorno = executarComandoBanco($conn, $sql);
 
-            if ($retorno > 0) {
-                $mensagem = '<div class="success">Reserva inserida com sucesso!</div>';
+            if (pg_num_rows($retorno) == 0) {
+
+                $sql = "
+                    INSERT INTO reserva (
+                                    hos_id,
+                                    apt_id,
+                                    data_Aluguel
+                                )
+                                VALUES(
+                                    $idHospede,
+                                    $idApartamento,
+                                    '$dataAluguel'
+                                )";
+                
+                $retorno = pg_affected_rows(executarComandoBanco($conn, $sql));
+
+                if ($retorno > 0) {
+                    $mensagem = '<div class="success">Reserva inserida com sucesso!</div>';
+                } else {
+                    $mensagem = '<div class="error">Falha ao inserir nova reserva!</div>';
+                }
             } else {
-                $mensagem = '<div class="error">Falha ao inserir nova reserva!</div>';
+                $mensagem = '<div class="error">Apartamento já reservado para esse dia!</div>';
             }
         } else {
-            $mensagem = '<div class="error">Apartamento já reservado para esse dia!</div>';
+            $mensagem = '<div class="error">Data selecionada já passou!</div>';
         }
         
     } else if ($acao == 'atualizar') {
@@ -58,21 +62,39 @@ if (isset($_POST['acao'])) {
         $idHospede = $_POST['hos-id'];
         $idApartamento = $_POST['apt-id'];
         $dataAluguel = new DateTime($_POST['data-aluguel']);
-        $dataAluguel = $dataAluguel->format('d-m-Y H:i:s');
 
-        $sql = "
-            UPDATE reserva 
-               SET hos_id = $idHospede, 
-                   apt_id = $idApartamento,
-                   data_aluguel = '$dataAluguel'
-             WHERE id = $id";
-        
-        $retorno = @pg_affected_rows(executarComandoBanco($conn, $sql));
+        if ($dataAluguel >= new DateTime()) {
+            $dataAluguel = $dataAluguel->format('d-m-Y H:i:s');
 
-        if ($retorno > 0) {
-            $mensagem = '<div class="success">Reserva atualizada com sucesso!</div>';
+            $sql = "
+                SELECT *
+                FROM reserva
+                WHERE apt_id = $idApartamento
+                AND data_aluguel = '$dataAluguel'";
+            
+            $retorno = executarComandoBanco($conn, $sql);
+
+            if (pg_num_rows($retorno) == 0) {
+
+                $sql = "
+                    UPDATE reserva 
+                    SET hos_id = $idHospede, 
+                        apt_id = $idApartamento,
+                        data_aluguel = '$dataAluguel'
+                    WHERE id = $id";
+                
+                $retorno = @pg_affected_rows(executarComandoBanco($conn, $sql));
+
+                if ($retorno > 0) {
+                    $mensagem = '<div class="success">Reserva atualizada com sucesso!</div>';
+                } else {
+                    $mensagem = '<div class="error">Falha ao atualizar reserva!</div>';
+                }
+            } else {
+                $mensagem = '<div class="error">Apartamento já reservado para esse dia!</div>';
+            }
         } else {
-            $mensagem = '<div class="error">Falha ao atualizar reserva!</div>';
+            $mensagem = '<div class="error">Data selecionada já passou!</div>';
         }
     }
 }
@@ -80,6 +102,7 @@ if (isset($_POST['acao'])) {
 $linha['hos_id'] = '';
 $linha['apt_id'] = '';
 
+$id = '';
 if (isset($_GET['id'])){
     $id = $_GET['id'];
     $sql = "
@@ -89,13 +112,20 @@ if (isset($_GET['id'])){
 
     $retorno = executarComandoBanco($conn, $sql);
     $linha = pg_fetch_array($retorno);
+    
+    $retorno = @pg_affected_rows(executarComandoBanco($conn, $sql));
+    
+    if ($retorno == 0) {
+        header("Location: http://$linkSite?url=listagemReserva");
+    } 
+
     $linha['data_aluguel'] = new DateTime($linha['data_aluguel']);
     $linha['data_aluguel'] = $linha['data_aluguel']->format('Y-m-d');
 }
 ?>
 <main>
     <form method="POST">
-        <h1>Cadastro de Reserva</h1>
+        <?=$id ? '<h1>Atualização de Reserva</h1>' : '<h1>Cadastro de Reserva</h1>'?>
         <?=$mensagem?>
         <input type="hidden" id="id" name="id" value="<?=((isset($_GET['id'])) ? $_GET['id'] : '0')?>">
         <div class="row">
