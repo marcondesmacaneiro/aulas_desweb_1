@@ -1,32 +1,30 @@
 <?php
 
 session_start();
-$usuario["isma"] = "123";
 
-if (isset($_POST["login"])) {
-  $login = $_POST["login"];
-  $senha = $_POST["senha"];
-  if (isset($usuario[$login]) && ($usuario[$login] == $senha)) {
-    $_SESSION["login"] = $login;
-  }
+$dbconn = pg_connect("host=postgres port=5432 dbname=isma user=isma password=isma");
+
+$email = $_POST["email"];
+$senha = $_POST["senha"];
+
+$query = pg_query($dbconn, "SELECT * FROM usuarios WHERE email = '$email' AND senha = '$senha' LIMIT 1");
+
+
+$resultado = pg_fetch_object($query);
+
+if ($resultado) {
+    $_SESSION["valid"] = true;
+    $_SESSION["cnpj"] = $resultado->cnpj;
+    $_SESSION["nome"] = $resultado->nome;
+    $_SESSION["email"] = $resultado->email;
+
+    echo json_encode([
+        "success" => true
+    ]);
+    header("HTTP/1.0 200 OK");
+} else {
+    echo json_encode([
+        "success" => false
+    ]);
+    header("HTTP/1.0 401 Unauthorized");
 }
-
-if (!isset($_SESSION["login"])) {
-?>
-<html>
-  <head>
-    <title>Teste</title>
-  </head>
-  <body>
-    <form method="POST">
-      Nome: <input type="text" name="login"><br>
-      Senha: <input type="password" name="senha">
-      <input type="submit" value="OK">
-    </form>
-  </body>
-</html>
-<?php
-  die();
-}
-
-?>
