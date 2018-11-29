@@ -1,0 +1,59 @@
+body{
+    padding: 10px;
+    background-image: url("../imagens/background.jpg");
+}
+
+#logout{
+    float: right;
+}
+
+#form_login{
+    margin-left: 340px;
+    margin-top: 150px;
+    width: 175px;
+    zoom: 150%;
+
+}
+
+#btn_login{
+    display: inline-block;
+    margin-bottom: 0;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 8px 18px;
+    font-size: 16px;
+    height: 35px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    display: block;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    color: #FFFFFF;
+    background-color: #45565E;
+    border-color: #9D9D9D;
+    font-family: "Source Sans Pro","Open Sans",Arial,sans-serif;
+    font-weight: 200;
+}
+
+#btn_login:hover{
+    text-decoration: none;
+    color: #FFFFFF;
+    background-color: #889EAB;
+    border-color: #9D9D9D;
+}
+
+#lb{
+    font-family: "Source Sans Pro","Open Sans",Arial,sans-serif;
+    color: #000;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+
+

@@ -1,0 +1,17 @@
+body{
+    padding: 10px;
+}
+
+#logout{
+    float: right;
+}
+
+#login{
+    width: 100%;
+}
+#senha{
+    width: 100%;
+}
+
+
+
