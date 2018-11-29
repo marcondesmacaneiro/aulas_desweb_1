@@ -1,28 +1,37 @@
 <?php
+
 namespace app\model;
-class Mensagens{
+
+class Mensagens {
+
     /**
      * exibe essa mensagem ao inserir um registro.
-     * @return string 
+     * @return string
      */
-    public function mensagemInclusao(){
-            return 'Registro salvo com sucesso!';
-        
+    public function mensagemInclusao() {
+        return 'Registro salvo com sucesso!';
     }
+
     /**
      * exibe essa mensagem ao alterar um registro.
-     * @return string 
+     * @return string
      */
-    public function mensagemAlteracao(){
-        
+    public function mensagemAlteracao() {
+
         return 'Registro Alterado com sucesso!';
     }
+
     /**
      * exibe essa mensagem ao excluir um registro.
-     * @return string 
+     * @return string
      */
-    public function mensagemExclusao(){
-        
+    public function mensagemExclusao() {
+
         return 'Registro Exlcuido!!';
     }
+
+    public function mensagemErro() {
+        return 'Não é possivel excluir pois este registro está relacionado a outro registro!';
+    }
+
 }

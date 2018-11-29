@@ -30,7 +30,7 @@ echo "  </tbody>
 ?>
 
 <input type="submit"  value="Excluir" onclick="deletar()" class="btn btn-danger">
-<input type="submit"  value="Selecionar" onclick="selecionar()" class="btn btn-primary">
+<input type="submit"  value="Selecionar" onclick="selecionar()" class="btn btn-info">
 
 </form>
 <form  class="form-signin" method="" action="" id="form-salvar">
@@ -46,7 +46,7 @@ echo "  </tbody>
         </div>
     </div>
     <input type="submit" value="Enviar" onclick="enviar()" class="btn btn-success">
-    <input type="reset" value="Cancelar"  class="btn btn-default">
+    <input type="reset" value="Cancelar"  class="btn btn-secondary">
 </form>
 <br/>
 <br/>

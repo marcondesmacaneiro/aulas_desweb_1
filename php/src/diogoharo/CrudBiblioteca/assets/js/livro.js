@@ -90,6 +90,8 @@ function enviar() {
             setTimeout(function() {
                 $("#mensagem").css('display', 'none');
             }, 3000);
+            retorna();
+
         },
         error: function() {
             $("#mensagem").html('Erro');
