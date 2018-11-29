@@ -39,4 +39,7 @@ CREATE TABLE usuario (
     id SERIAL,
     username VARCHAR(25) NOT NULL,
     pass VARCHAR(50) NOT NULL
-)
+);
+
+INSERT INTO usuario(username, pass) 
+     VALUES ('admin', 'admin');
