@@ -43,8 +43,8 @@ if (isset($_POST['acao'])) {
 
         $sql = "
             UPDATE hospede 
-               SET nome = $nome, 
-                   documento = $documento
+               SET nome = '$nome', 
+                   documento = '$documento'
              WHERE id = $id";
         
         $retorno = @pg_affected_rows(executarComandoBanco($conn, $sql));
@@ -57,6 +57,7 @@ if (isset($_POST['acao'])) {
     }
 }
 
+$id = '';
 if (isset($_GET['id'])){
     $id = $_GET['id'];
     $sql = "
@@ -66,12 +67,18 @@ if (isset($_GET['id'])){
 
     $retorno = executarComandoBanco($conn, $sql);
     $linha = pg_fetch_array($retorno);
+
+    $retorno = @pg_affected_rows(executarComandoBanco($conn, $sql));
+    
+    if ($retorno == 0) {
+        header("Location: http://$linkSite?url=listagemHospede");
+    } 
 }
 
 ?>
 <main>
     <form method="POST">
-        <h1>Cadastro de Hóspede</h1>
+        <?=$id ? '<h1>Atualização de Hóspede</h1>' : '<h1>Cadastro de Hóspede</h1>'?>
         <?=$mensagem?>
         <input type="hidden" id="id" name="id" value="<?=((isset($_GET['id'])) ? $_GET['id'] : '0')?>">
         <div class="row">

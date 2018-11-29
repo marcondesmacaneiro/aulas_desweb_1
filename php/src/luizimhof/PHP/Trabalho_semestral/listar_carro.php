@@ -6,6 +6,9 @@
     
 ?>
 
+<a href="seguro.php"> Voltar</a>
+    <hr>
+
 <table border="1">
     <tr>
         <td>ID</td>
@@ -28,7 +31,20 @@
                 <a href = "deletar_carro.php?id=<?=$linha["id"]?>">Remover</a>
                 <br>
                 <a href = "atualizar_carro.php?id=<?=$linha["id"]?>">Atualizar</a>
-
+                <br>
+                <a href = "adicionar_saldo.php?id=<?=$linha["id"]?>">Adicionar saldo</a>
+                <br>
+                <?php 
+                if($linha["vaga_id"] === NULL){?>
+                    <a href = "estacionar_carro.php?id=<?=$linha["id"]?>">Estacionar o carro</a>
+                    <?php
+                }
+                else{
+                    ?>
+                    <a href = "sair_carro.php?id=<?=$linha["id"]?>">Sair do estacionamento</a>
+                    <?php
+                }
+                ?>
             </td>
         </tr>
         <?php

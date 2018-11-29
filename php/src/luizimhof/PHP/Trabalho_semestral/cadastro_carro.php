@@ -1,4 +1,4 @@
-<a href="listar_carro.php"> Voltar</a>
+<a href="seguro.php"> Voltar</a>
 <hr>
 
 <?php

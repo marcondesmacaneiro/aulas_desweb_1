@@ -54,8 +54,8 @@ $retorno = executarComandoBanco($conn, $sql);
             <td><?=$linha['nome']?></td>
             <td><?=$linha['documento']?></td>
             <td>
-                <a href="?url=listagemHospede&acao=excluir&id=<?=$linha['id']?>">Excluir</a>
-                <a href="?url=cadastroHospede&id=<?=$linha['id']?>">Atualizar</a>
+                <a href="?url=listagemHospede&acao=excluir&id=<?=$linha['id']?>"><i class="fas fa-trash"></i></a>
+                <a href="?url=cadastroHospede&id=<?=$linha['id']?>"><i class="fas fa-pencil-alt"></i></a>
             </td>
         </tr>
     <?php

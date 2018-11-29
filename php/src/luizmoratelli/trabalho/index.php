@@ -1,4 +1,5 @@
 <?php 
+date_default_timezone_set('America/Sao_Paulo');
 session_start();
 if ($_SERVER['REMOTE_ADDR'] == '::1' || $_SERVER['REMOTE_ADDR'] == 'localhost') {
     $diretorioSite = 'C:\xampp\htdocs\marcondes\aulas_desweb_1\php\src\luizmoratelli\trabalho';
