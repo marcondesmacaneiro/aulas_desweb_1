@@ -1,0 +1,14 @@
+{
+    "name": "alex/ajax-com-php",
+    "authors": [
+        {
+            "name": "alexmcoelho",
+            "email": "alexma_coelho@hotmail.com"
+        }
+    ],
+    "autoload": {
+    	"psr-4": {
+    		"app\\":"app"
+    	}
+    }
+}
